@@ -293,3 +293,27 @@ align-items: flex-start;
   -moz-box-shadow:    0px 6px 5px 0px rgba(50, 50, 50, 0.48);
   box-shadow:         0px 6px 5px 0px rgba(50, 50, 50, 0.48);
 }
+.infoIconos {
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: space-around;
+    list-style: outside none none;
+    -webkit-align-items: flex-start;
+align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
+.infoIconosItem {
+  flex-basis: auto;
+    box-sizing: border-box;
+    margin: 1rem 0.5rem;
+    text-align: center;
+}
+.infoIconosItem img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 6px 5px 0px rgba(50, 50, 50, 0.48);
+  -moz-box-shadow:    0px 6px 5px 0px rgba(50, 50, 50, 0.48);
+  box-shadow:         0px 6px 5px 0px rgba(50, 50, 50, 0.48);
+}
