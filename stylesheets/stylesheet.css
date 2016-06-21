@@ -1,3 +1,4 @@
+@import url('font-awesome.css');
 * {
   box-sizing: border-box; }
 
@@ -56,8 +57,11 @@ a {
 .page-header {
   color: #fff;
   text-align: center;
-  background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957); }
+	background: url(../images/pexels-photo.jpg) no-repeat center;
+  background-size: cover;
+  /*background-color: #159957;
+  background-image: linear-gradient(120deg, #155799, #159957); */
+}
 
 @media screen and (min-width: 64em) {
   .page-header {
@@ -243,3 +247,49 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
+
+.img-perfil {
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  -webkit-box-shadow: 0px 6px 5px 0px rgba(50, 50, 50, 0.48);
+  -moz-box-shadow:    0px 6px 5px 0px rgba(50, 50, 50, 0.48);
+  box-shadow:         0px 6px 5px 0px rgba(50, 50, 50, 0.48);
+}
+
+.infoTools {
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: space-around;
+    list-style: outside none none;
+    -webkit-align-items: flex-start;
+align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
+.infoToolsItem {
+  flex-basis: auto;
+    box-sizing: border-box;
+    margin: 1rem 0.5rem;
+    text-align: center;
+}
+.infoToolsItem a {
+  color:#fff;
+}
+.infoToolsItem a:hover {
+  color:#c4c4c4;
+}
+
+
+.infoToolsItem i {
+  font-size: 3em;
+}
+.infoToolsItem img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 6px 5px 0px rgba(50, 50, 50, 0.48);
+  -moz-box-shadow:    0px 6px 5px 0px rgba(50, 50, 50, 0.48);
+  box-shadow:         0px 6px 5px 0px rgba(50, 50, 50, 0.48);
+}
