@@ -58,6 +58,7 @@ a {
   color: #fff;
   text-align: center;
 	background: url(../images/pexels-photo.jpg) no-repeat center;
+  background-attachment: fixed;
   background-size: cover;
   /*background-color: #159957;
   background-image: linear-gradient(120deg, #155799, #159957); */
@@ -357,4 +358,7 @@ align-items: flex-start;
 .gallery li img {
   max-width: 100%;
   height: auto;
+}
+.box-imagenUni {
+  border: 1px dashed #ccc;
 }
