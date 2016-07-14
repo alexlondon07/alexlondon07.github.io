@@ -371,3 +371,8 @@ align-items: flex-start;
   -webkit-justify-content: space-between;
    justify-content: space-between;
 }
+@media screen and (max-width: 720px) {
+  .cotainer-info {
+    flex-flow: column   nowrap;
+   }
+}
