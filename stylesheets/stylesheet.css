@@ -365,3 +365,9 @@ align-items: flex-start;
 .with_tw{
   width: 300px;
 }
+.cotainer-info {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+   justify-content: space-between;
+}
