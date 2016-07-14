@@ -362,3 +362,6 @@ align-items: flex-start;
 .box-imagenUni {
   border: 1px dashed #ccc;
 }
+.with_tw{
+  width: 300px;
+}
