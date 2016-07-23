@@ -66,7 +66,7 @@ a {
 
 @media screen and (min-width: 64em) {
   .page-header {
-    padding: 5rem 6rem; } }
+    padding: 5rem 0 0; } }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .page-header {
@@ -82,7 +82,11 @@ a {
 
 @media screen and (min-width: 64em) {
   .project-name {
-    font-size: 3.25rem; } }
+    font-size: 3.25rem;
+    text-transform: uppercase;
+text-shadow: 0px 5px 2px rgba(0, 0, 0, 0.7);
+  }
+  }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .project-name {
@@ -99,7 +103,13 @@ a {
 
 @media screen and (min-width: 64em) {
   .project-tagline {
-    font-size: 1.25rem; } }
+    font-size: 1.25rem;
+    color: #26fa03;
+    background: #000;
+    display:inline-block;
+    padding: 5px 15px;
+  }
+  }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .project-tagline {
@@ -285,24 +295,38 @@ box-shadow:         0px 3px 5px 0px rgba(50, 50, 50, 0.3);
 .infoTools {
     display: flex;
     flex-wrap: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style: outside none none;
     -webkit-align-items: flex-start;
 align-items: flex-start;
-    margin: 0;
+    margin: 80px 0 0;
     padding: 0;
 }
 .infoToolsItem {
   flex-basis: auto;
     box-sizing: border-box;
-    margin: 1rem 0.5rem;
+    margin: 1rem 0rem 0rem;
     text-align: center;
+    width: 100%;
+    padding: 5px;
 }
 .infoToolsItem a {
   color:#fff;
 }
 .infoToolsItem a:hover {
   color:#c4c4c4;
+}
+.info-colorFb  {
+  background:#3b5998;
+}
+.info-colorTw  {
+  background:#1da1f2;
+}
+.info-colorLi  {
+  background:#0077B5;
+}
+.info-colorGh  {
+  background:#333;
 }
 
 
