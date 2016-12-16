@@ -409,7 +409,12 @@ align-items: flex-start;
   border: 1px dashed #ccc;
 }
 .with_tw{
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
+  padding: 2px 5px;
+  background-color: #ccc;
+  border-radius: 5px;
+  margin: 0px 10px;
 }
 .cotainer-info {
   display: -webkit-flex;
