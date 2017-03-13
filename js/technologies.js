@@ -1,5 +1,5 @@
 $(document).on('ready', inittecnologies);
-var q, tecnologies_array, diplomas_array, info, infoDiplomas;
+var q, tecnologies_array, diplomas_array, courses_sena_array_1, info, infoDiplomas, infoSenaCourses;
 
 /**
 * se activa para inicializar el documento
@@ -117,6 +117,48 @@ function inittecnologies() {
             "route": 'images/itm/ingeniero_de_sistemas.jpg'
         },
     }
+
+    //Curso sena
+    courses_sena_array_1 = {
+        "Curso de gestión de la seguridad informática": {
+            "name": 'Curso de gestión de la seguridad informática',
+            "route": 'images/sena/seguridad_informatica.PNG'
+        },
+        "Curso de bases de datos generalidades y sistemas de gestión": {
+            "name": 'Curso de bases de datos generalidades y sistemas de gestión',
+            "route": 'images/sena/bd.PNG'
+        },
+        "Curso de calidad en el desarrollo del software": {
+            "name": 'Curso de calidad en el desarrollo del software',
+            "route": 'images/sena/calidad_desarrollo_software.PNG'
+        },
+    }
+
+
+    courses_sena_array_2 = {
+        "Curso de diseño de casos de usos": {
+            "name": 'Curso de diseño de casos de usos',
+            "route": 'images/sena/diseno_de_casos_de_usos.PNG'
+        },
+        "Aplicación de la calidad del software en el proceso de desarrollo": {
+            "name": 'Aplicación de la calidad del software en el proceso de desarrollo',
+            "route": 'images/sena/aplicacion_calidad_desarrollo_software.PNG'
+        },
+        "Variables y estructuras de control en la programación orientada a objetos : JAVA": {
+            "name": 'Variables y estructuras de control en la programación orientada a objetos : JAVA',
+            "route": 'images/sena/variables-estructutas-de-control-poo-java.PNG'
+        },
+        "Principios del analisis y diseño orientado a objetos, utitilizando el estadar UML": {
+            "name": 'Principios del analisis y diseño orientado a objetos, utitilizando el estadar UML',
+            "route": ''
+        },
+        "Angular2": {
+            "name": 'Angular2',
+            "route": 'images/courses/angular2.jpg'
+        },
+    }
+
+
     TECHNOLOGY.showdataTechnology();
 }
 var TECHNOLOGY = {
@@ -149,6 +191,25 @@ var TECHNOLOGY = {
             infoDiplomas += '</li>';
         }
         $("#diplomas_data").append(infoDiplomas);
+
+        //Llamamos la Funcion para cargar Cursos del sena
+        TECHNOLOGY.showdataSenaCourses("#sena_courses_data1", courses_sena_array_1);
+        TECHNOLOGY.showdataSenaCourses("#sena_courses_data2", courses_sena_array_2);
+    },
+    showdataSenaCourses: function (id, data) {
+        $(id).empty();
+        infoSenaCourses = '';
+        for (var i in data) {
+            infoSenaCourses += '<li>';
+            infoSenaCourses += '<div class="galeryDiplo-Item">';
+            infoSenaCourses += '<h3><a href="#">"' + data[i].name + '"</a></h3>';
+            infoSenaCourses += '<a href="' + data[i].route + '" target="_blank">';
+            infoSenaCourses += '<img  alt=""' + data[i].name + '"" src="' + data[i].route + '" class="img-responsive box-imagenUni">';
+            infoSenaCourses += '</a>';
+            infoSenaCourses += '</div>';
+            infoSenaCourses += '</li>';
+        }
+        $(id).append(infoSenaCourses);
     }
 }
 
