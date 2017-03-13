@@ -10,99 +10,99 @@ function inittecnologies() {
     tecnologies_array = {
         "PHP": {
             "name": 'PHP',
-            "route": 'iconos/iconos-Php.png'
+            "route": 'images/iconos/iconos-Php.png'
         },
         "Laravel": {
             "name": 'Laravel',
-            "route": 'iconos/iconos-laravel.png'
+            "route": 'images/iconos/iconos-laravel.png'
         },
         "JavaScript": {
             "name": 'JavaScript',
-            "route": 'iconos/iconos-javaScript.png'
+            "route": 'images/iconos/iconos-javaScript.png'
         },
         "Mysql": {
             "name": 'Mysql',
-            "route": 'iconos/iconos-Mysql.png'
+            "route": 'images/iconos/iconos-MySql.png'
         },
         "Github": {
             "name": 'Github',
-            "route": 'iconos/iconos-Github.png'
+            "route": 'images/iconos/iconos-Github.png'
         },
         "Ajax": {
             "name": 'Ajax',
-            "route": 'iconos/iconos-ajax.png'
+            "route": 'images/iconos/iconos-ajax.png'
         },
         "Html5": {
             "name": 'Html5',
-            "route": 'iconos/iconos-html5.png'
+            "route": 'images/iconos/iconos-html5.png'
         },
         "AngularJs": {
             "name": 'AngularJs',
-            "route": 'iconos/iconos-angular.png'
+            "route": 'images/iconos/iconos-angular.png'
         },
         "MeanJS": {
             "name": 'MeanJS',
-            "route": 'iconos/iconos-mean.png'
+            "route": 'images/iconos/iconos-mean.png'
         },
         "AngularJs": {
             "name": 'AngularJs',
-            "route": 'iconos/iconos-angular.png'
+            "route": 'images/iconos/iconos-angular.png'
         },
         "RubyonRails": {
             "name": 'RubyonRails',
-            "route": 'iconos/iconos-rails.png'
+            "route": 'images/iconos/iconos-rails.png'
         },
         "Yeoman": {
             "name": 'Yeoman',
-            "route": 'iconos/iconos-yeoman.png'
+            "route": 'images/iconos/iconos-yeoman.png'
         },
         "Jquery": {
             "name": 'Jquery',
-            "route": 'iconos/iconos-Jquery.png'
+            "route": 'images/iconos/iconos-Jquery.png'
         },
         "Jquery": {
             "name": 'Jquery',
-            "route": 'iconos/iconos-Jquery.png'
+            "route": 'images/iconos/iconos-Jquery.png'
         },
         "Firebase": {
             "name": 'Firebase',
-            "route": 'iconos/iconos-firebase.png'
+            "route": 'images/iconos/iconos-firebase.png'
         },
         "Css": {
             "name": 'Css',
-            "route": 'iconos/iconos-css.png'
+            "route": 'images/iconos/iconos-css.png'
         },
         "Jquery": {
             "name": 'Jquery',
-            "route": 'iconos/iconos-Jquery.png'
+            "route": 'images/iconos/iconos-Jquery.png'
         },
         "NodeJS": {
             "name": 'NodeJS',
-            "route": 'iconos/iconos-nodejs.png'
+            "route": 'images/iconos/iconos-nodejs.png'
         },
         "PostgreSQL": {
             "name": 'PostgreSQL',
-            "route": 'iconos/iconos-Post.png'
+            "route": 'images/iconos/iconos-Post.png'
         },
         "NodeJS": {
             "name": 'NodeJS',
-            "route": 'iconos/iconos-nodejs.png'
+            "route": 'images/iconos/iconos-nodejs.png'
         },
         "Git": {
             "name": 'Git',
-            "route": 'iconos/iconos-git.png'
+            "route": 'images/iconos/iconos-git.png'
         },
         "Vagrant": {
             "name": 'Vagrant',
-            "route": 'iconos/iconos-vagrant.png'
+            "route": 'images/iconos/iconos-vagrant.png'
         },
         "visual studio code": {
             "name": 'Visual studio code',
-            "route": 'iconos/iconos-visual-studio-code.png'
+            "route": 'images/iconos/iconos-visual-studio-code.png'
         },
         "Angular2 - Typescript": {
             "name": 'angular-ts',
-            "route": 'iconos/iconos-angular-ts.png'
+            "route": 'images/iconos/iconos-angular-ts.png'
         },
     }
     TECHNOLOGY.showdataTechnology();
