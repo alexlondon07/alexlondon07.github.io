@@ -1,5 +1,5 @@
 $(document).on('ready', inittecnologies);
-var q, tecnologies_array, info;
+var q, tecnologies_array, diplomas_array, info, infoDiplomas;
 
 /**
 * se activa para inicializar el documento
@@ -105,10 +105,22 @@ function inittecnologies() {
             "route": 'images/iconos/iconos-angular-ts.png'
         },
     }
+
+    //Titulos Universitarios
+    diplomas_array = {
+        "Tecnologo de sistemas de informacion": {
+            "name": 'Tecnologo de sistemas de informacion',
+            "route": 'images/itm/tecnologo.jpg'
+        },
+        "Ingeniero de sistemas": {
+            "name": 'Ingeniero de sistemas',
+            "route": 'images/itm/ingeniero_de_sistemas.jpg'
+        },
+    }
     TECHNOLOGY.showdataTechnology();
 }
-var return_page = '';
 var TECHNOLOGY = {
+    //Funcion para mostrar las tecnlogias usadas
     showdataTechnology: function () {
         $("#tecnologies_data").empty();
         info = '';
@@ -116,6 +128,27 @@ var TECHNOLOGY = {
             info += '<li class="infoIconosItem"><img src="' + tecnologies_array[i].route + '" alt="' + tecnologies_array[i].name + '" /></li>';
         }
         $("#tecnologies_data").append(info);
+
+        //Llamamos la Funcion para cargar los diplomas
+        TECHNOLOGY.showdataDiplomas();
+    },
+    //Funcion para mostrar los titulos univesitarios
+    showdataDiplomas: function () {
+        $("#diplomas_data").empty();
+        infoDiplomas = '';
+        for (var i in diplomas_array) {
+            infoDiplomas += '<li>';
+            infoDiplomas += '<div class="galeryDiplo-Item">';
+            infoDiplomas += '<h3><a href="#">"' + diplomas_array[i].name + '"</a></h3>';
+            infoDiplomas += '<a href=""' + diplomas_array[i].route + '" target="_blank">';
+            infoDiplomas += '<div class="box-imagenUni">';
+            infoDiplomas += '<img alt="' + diplomas_array[i].name + '"  src="' + diplomas_array[i].route + '" class="img-responsive">';
+            infoDiplomas += '</div>';
+            infoDiplomas += '</a>';
+            infoDiplomas += '</div>';
+            infoDiplomas += '</li>';
+        }
+        $("#diplomas_data").append(infoDiplomas);
     }
 }
 
