@@ -110,11 +110,11 @@ function inittecnologies() {
     diplomas_array = {
         "Tecnologo de sistemas de informacion": {
             "name": 'Tecnologo de sistemas de informacion',
-            "route": 'images/itm/tecnologo.jpg'
+            "route": ''
         },
         "Ingeniero de sistemas": {
             "name": 'Ingeniero de sistemas',
-            "route": 'images/itm/ingeniero_de_sistemas.jpg'
+            "route": ''
         },
     }
 
