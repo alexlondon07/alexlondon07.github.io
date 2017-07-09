@@ -109,56 +109,44 @@ function inittecnologies() {
     //Titulos Universitarios
     diplomas_array = {
         "Tecnologo de sistemas de informacion": {
-            "name": 'Tecnologo de sistemas de informacion',
-            "route": ''
+            "name": 'Tecnologo de sistemas de informacion'
         },
         "Ingeniero de sistemas": {
-            "name": 'Ingeniero de sistemas',
-            "route": ''
+            "name": 'Ingeniero de sistemas'
         },
     }
 
     //Curso sena
     courses_sena_array_1 = {
         "Curso de gestión de la seguridad informática": {
-            "name": 'Curso de gestión de la seguridad informática',
-            "route": 'images/sena/seguridad_informatica.PNG'
+            "name": 'Curso de gestión de la seguridad informática - SENA',
         },
         "Curso de bases de datos generalidades y sistemas de gestión": {
-            "name": 'Curso de bases de datos generalidades y sistemas de gestión',
-            "route": 'images/sena/bd.PNG'
+            "name": 'Curso de bases de datos generalidades y sistemas de gestión - SENA'
         },
         "Curso de calidad en el desarrollo del software": {
-            "name": 'Curso de calidad en el desarrollo del software',
-            "route": 'images/sena/calidad_desarrollo_software.PNG'
+            "name": 'Curso de calidad en el desarrollo del software - SENA'
         },
     }
 
 
     courses_sena_array_2 = {
         "Curso de diseño de casos de usos": {
-            "name": 'Curso de diseño de casos de usos',
-            "route": 'images/sena/diseno_de_casos_de_usos.PNG'
+            "name": 'Curso de diseño de casos de usos'
         },
         "Aplicación de la calidad del software en el proceso de desarrollo": {
-            "name": 'Aplicación de la calidad del software en el proceso de desarrollo',
-            "route": 'images/sena/aplicacion_calidad_desarrollo_software.PNG'
+            "name": 'Aplicación de la calidad del software en el proceso de desarrollo - SENA'
         },
         "Variables y estructuras de control en la programación orientada a objetos : JAVA": {
-            "name": 'Variables y estructuras de control en la programación orientada a objetos : JAVA',
-            "route": 'images/sena/variables-estructutas-de-control-poo-java.PNG'
+            "name": 'Variables y estructuras de control en la programación orientada a objetos : JAVA - SENA'
         },
         "Principios del analisis y diseño orientado a objetos, utitilizando el estadar UML": {
-            "name": 'Principios del analisis y diseño orientado a objetos, utitilizando el estadar UML',
-            "route": ''
+            "name": 'Principios del analisis y diseño orientado a objetos, utitilizando el estadar UML - SENA'
         },
         "Angular2": {
-            "name": 'Angular2',
-            "route": 'images/courses/angular2.jpg'
+            "name": 'Angular2'
         },
     }
-
-
     TECHNOLOGY.showdataTechnology();
 }
 var TECHNOLOGY = {
@@ -179,16 +167,7 @@ var TECHNOLOGY = {
         $("#diplomas_data").empty();
         infoDiplomas = '';
         for (var i in diplomas_array) {
-            infoDiplomas += '<li>';
-            infoDiplomas += '<div class="galeryDiplo-Item">';
-            infoDiplomas += '<h3><a href="#">"' + diplomas_array[i].name + '"</a></h3>';
-            infoDiplomas += '<a href=""' + diplomas_array[i].route + '" target="_blank">';
-            infoDiplomas += '<div class="box-imagenUni">';
-            infoDiplomas += '<img alt="' + diplomas_array[i].name + '"  src="' + diplomas_array[i].route + '" class="img-responsive">';
-            infoDiplomas += '</div>';
-            infoDiplomas += '</a>';
-            infoDiplomas += '</div>';
-            infoDiplomas += '</li>';
+            infoDiplomas += '<li>' + diplomas_array[i].name + '</li>';
         }
         $("#diplomas_data").append(infoDiplomas);
 
@@ -200,14 +179,7 @@ var TECHNOLOGY = {
         $(id).empty();
         infoSenaCourses = '';
         for (var i in data) {
-            infoSenaCourses += '<li>';
-            infoSenaCourses += '<div class="galeryDiplo-Item">';
-            infoSenaCourses += '<h3><a href="#">"' + data[i].name + '"</a></h3>';
-            infoSenaCourses += '<a href="' + data[i].route + '" target="_blank">';
-            infoSenaCourses += '<img  alt=""' + data[i].name + '"" src="' + data[i].route + '" class="img-responsive box-imagenUni">';
-            infoSenaCourses += '</a>';
-            infoSenaCourses += '</div>';
-            infoSenaCourses += '</li>';
+            infoSenaCourses += '<li>' + data[i].name + '</li>';
         }
         $(id).append(infoSenaCourses);
     }
