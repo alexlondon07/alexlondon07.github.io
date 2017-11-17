@@ -104,35 +104,51 @@ function inittecnologies() {
             "name": 'angular-ts',
             "route": 'images/iconos/iconos-angular-ts.png'
         },
+        "Android Studio": {
+            "name": 'android-studio',
+            "route": 'images/iconos/android-studio.png'
+        },
+        "Databases": {
+            "name": 'bd',
+            "route": 'images/iconos/bd.png'
+        },
+        "Android": {
+            "name": 'Android',
+            "route": 'images/iconos/iconos_android.png'
+        },
+        "Java": {
+            "name": 'Java',
+            "route": 'images/iconos/java.png'
+        },
     }
 
     //Titulos Universitarios
     diplomas_array = {
-        "Tecnologo de sistemas de informacion": {
-            "name": 'Tecnologo de sistemas de informacion'
+        "Technologist of Information Systems": {
+            "name": 'Technologist of Information Systems'
         },
-        "Ingeniero de sistemas": {
-            "name": 'Ingeniero de sistemas'
+        "Systems Engineer": {
+            "name": 'Systems Engineer'
         },
     }
 
     //Curso sena
     courses_sena_array_1 = {
-        "Curso de gestión de la seguridad informática": {
-            "name": 'Curso de gestión de la seguridad informática - SENA',
+        "Computer security Management": {
+            "name": 'Computer security Management - SENA',
         },
-        "Curso de bases de datos generalidades y sistemas de gestión": {
-            "name": 'Curso de bases de datos generalidades y sistemas de gestión - SENA'
+        "General data Bases and management systems": {
+            "name": 'General data Bases and management systems - SENA'
         },
-        "Curso de calidad en el desarrollo del software": {
-            "name": 'Curso de calidad en el desarrollo del software - SENA'
+        "Quality in software development": {
+            "name": 'Quality in software development - SENA'
         },
     }
 
 
     courses_sena_array_2 = {
-        "Curso de diseño de casos de usos": {
-            "name": 'Curso de diseño de casos de usos'
+        "Use case design": {
+            "name": 'Use case design - SENA'
         },
         "Aplicación de la calidad del software en el proceso de desarrollo": {
             "name": 'Aplicación de la calidad del software en el proceso de desarrollo - SENA'
@@ -140,8 +156,8 @@ function inittecnologies() {
         "Variables y estructuras de control en la programación orientada a objetos : JAVA": {
             "name": 'Variables y estructuras de control en la programación orientada a objetos : JAVA - SENA'
         },
-        "Principios del analisis y diseño orientado a objetos, utitilizando el estadar UML": {
-            "name": 'Principios del analisis y diseño orientado a objetos, utitilizando el estadar UML - SENA'
+        "Principios del análisis y diseño orientado a objetos, utitilizando el estadar UML": {
+            "name": 'Principios del análisis y diseño orientado a objetos, utitilizando el estadar UML - SENA'
         },
         "Angular2": {
             "name": 'Angular2'
