@@ -145,19 +145,18 @@ function inittecnologies() {
         },
     }
 
-
     courses_sena_array_2 = {
         "Use case design": {
             "name": 'Use case design - SENA'
         },
-        "Aplicación de la calidad del software en el proceso de desarrollo": {
-            "name": 'Aplicación de la calidad del software en el proceso de desarrollo - SENA'
+        "Application of software quality in the development process-SENA": {
+            "name": 'Application of software quality in the development process - SENA'
         },
-        "Variables y estructuras de control en la programación orientada a objetos : JAVA": {
-            "name": 'Variables y estructuras de control en la programación orientada a objetos : JAVA - SENA'
+        "Variables and control structures in object-oriented programming: JAVA ": {
+            "name": 'Variables and control structures in object-oriented programming: JAVA - SENA'
         },
-        "Principios del análisis y diseño orientado a objetos, utitilizando el estadar UML": {
-            "name": 'Principios del análisis y diseño orientado a objetos, utitilizando el estadar UML - SENA'
+        "Principles of analysis and object-oriented design, using the state UML": {
+            "name": 'Principles of analysis and object-oriented design, using the state UML-SENA - SENA'
         },
         "Angular2": {
             "name": 'Angular2'
