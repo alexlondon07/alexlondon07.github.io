@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap");
+* {
+  font-family: Raleway;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  outline: none !important;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container-fluid {
+  padding: 0 10% !important;
+}
+
+ul {
+  list-style: circle;
+}
+
+li::marker {
+  color: black;
+}
+
+p {
+  font-size: 2.48262rem;
+  letter-spacing: 0.115103rem;
+  color: #666766;
+  word-break: break-all;
+  justify-content: center;
+}
+
+.headLine {
+  width: 0.225693rem;
+  top: 0px;
+  left: 1rem;
+  height: 11.9617rem;
+  background-color: #292929;
+}
+
+.header {
+  padding-top: 17.8297rem;
+  padding-bottom: 10rem;
+  direction: ltr;
+  margin-bottom: 3rem;
+}
+
+.firstName {
+  font-weight: lighter;
+  text-transform: uppercase;
+  word-break: break-all;
+  color: #3e3e3e;
+  font-size: 6.65793rem;
+  line-height: 1.68;
+  letter-spacing: 3.89546rem;
+  margin-bottom: 1.12846rem;
+  direction: ltr;
+}
+
+.lastName {
+  font-weight: bold;
+  font-size: 9.02771rem;
+  text-transform: uppercase;
+  word-break: break-all;
+  padding-right: 5.64232rem;
+  color: #3e3e3e;
+  line-height: 1.09;
+  letter-spacing: 4.15952rem;
+  direction: ltr;
+}
+
+.jobTitle {
+  padding-right: 0px;
+  margin-top: 4.51385rem;
+  color: #292929;
+}
+.jobTitle span {
+  padding-left: 1rem;
+  letter-spacing: 0.710932rem;
+  text-transform: uppercase;
+  word-break: break-all;
+  direction: ltr;
+  color: #4c4a4a;
+  font-size: 3.04685rem;
+}
+
+.photo {
+  width: 27.2rem;
+  height: 27.2rem;
+  max-height: 270px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.middleLine {
+  width: 0.225693rem;
+  bottom: 3.1597rem;
+  left: 1rem;
+  height: 5.64232rem;
+  background-color: #292929;
+}
+
+.icon {
+  width: 5rem;
+  height: 5rem;
+  font-size: 2.5rem;
+  color: white;
+  background-color: #3e3e3e;
+  border-radius: 50%;
+  padding: 0.7rem;
+}
+
+a p {
+  word-break: break-all;
+  color: #666766;
+}
+
+.list-item {
+  padding-top: 2.03123rem;
+  padding-bottom: 2.03123rem;
+  margin-right: 1rem;
+}
+.list-item:not(:last-child) {
+  border-bottom: 0.225693rem solid #231f20;
+}
+
+.title {
+  width: 100%;
+  font-weight: bold;
+  font-size: 4rem;
+  text-transform: uppercase;
+  line-height: 4.5rem;
+  border-bottom: 1px solid #231f20;
+  padding-top: 0rem;
+  padding-bottom: 3.8rem;
+  color: #222121;
+  letter-spacing: 1.01562rem;
+  margin-bottom: 1.8rem;
+}
+
+.personal-details .title {
+  padding-top: 4rem;
+}
+
+.bullet {
+  position: relative;
+}
+.bullet i {
+  font-size: 2.6rem;
+}
+.bullet:before {
+  content: "";
+  position: absolute;
+  left: 1.9rem;
+  width: 0.3rem;
+  height: 70%;
+  background-color: #292929;
+  margin-top: 4.2rem;
+}
+
+.record {
+  padding-top: 2rem;
+}
+.record p {
+  width: 100%;
+  font-size: 2.7rem;
+  line-height: 1.33;
+  color: #666766;
+  word-break: break-word;
+  display: block;
+}
+
+li {
+  font-family: Raleway;
+  line-height: 1.33;
+  font-size: 2.8806rem;
+  color: #7b7b7b;
+}
+
+span {
+  color: #666766;
+  font-size: 2.28048rem;
+  line-height: 1.2;
+  letter-spacing: 0.5rem;
+}
+
+.btn-group-fab {
+  position: fixed;
+  width: 50px;
+  height: auto;
+  right: 20px;
+  bottom: 20px;
+}
+
+.btn-group-fab div {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.btn-group-fab .btn {
+  position: absolute;
+  bottom: 0;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 4px;
+  width: 40px;
+  height: 40px;
+  margin: 4px auto;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0mm !important;
+  }
+  html {
+    font-size: 24%;
+  }
+
+  .header {
+    padding-top: 12rem;
+    padding-bottom: 9rem;
+  }
+
+  ul li {
+    margin-left: 1rem;
+  }
+}
