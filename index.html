@@ -1,262 +1,243 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>CodePen - Resume / CV Template</title>
-  <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <title>CodePen - Resume / CV Template</title>
+    <link rel="stylesheet" href="./style.css">
 
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Resume/CV Alexander</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
-    <!-- Add Web Animations Polyfill :) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.2/web-animations.min.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@proyecto26/animatable-component@1.1.10/dist/animatable-component/animatable-component.esm.js"></script>
-  </head>
-  <body class="d-none">
-    <section id="app" class="container-fluid">
-      <header class="header position-relative">
-        <animatable-component autoplay animation="fadeInDownBig"  easing="ease-in-out" duration="1200">
-          <div class="headLine position-absolute"></div>
-        </animatable-component>
-        <div class="row">
-          <div class="col">
-            <animatable-component
-              autoplay
-              animation="fadeInLeft"
-              easing="ease-in-out"
-              duration="1200"
-            >
-              <h1 class="firstName text-break">
-                {{ firstName }}
-              </h1>
-            </animatable-component>
-            <animatable-component
-              autoplay
-              animation="fadeInDown"
-              easing="ease-in-out"
-              duration="1200"
-            >
-              <h2 class="lastName text-nowrap">
-                {{ lastName }}
-              </h2>
-            </animatable-component>
-            <animatable-component
-              autoplay
-              animation="fade-in-left"
-              easing="ease-in-out"
-              duration="1200"
-            >
-              <p class="jobTitle">
-                <i class="bi bi-circle-fill"></i>
-                <span class="text-break">
+    <!-- partial:index.partial.html -->
+    <html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Resume/CV Alexander</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <!-- Add Web Animations Polyfill :) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.2/web-animations.min.js"></script>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@proyecto26/animatable-component@1.1.10/dist/animatable-component/animatable-component.esm.js"></script>
+    </head>
+
+    <body class="d-none">
+        <section id="app" class="container-fluid">
+            <header class="header position-relative">
+                <animatable-component autoplay animation="fadeInDownBig" easing="ease-in-out" duration="1200">
+                    <div class="headLine position-absolute"></div>
+                </animatable-component>
+                <div class="row">
+                    <div class="col">
+                        <animatable-component autoplay animation="fadeInLeft" easing="ease-in-out" duration="1200">
+                            <h1 class="firstName text-break">
+                                {{ firstName }}
+                            </h1>
+                        </animatable-component>
+                        <animatable-component autoplay animation="fadeInDown" easing="ease-in-out" duration="1200">
+                            <h2 class="lastName text-nowrap">
+                                {{ lastName }}
+                            </h2>
+                        </animatable-component>
+                        <animatable-component autoplay animation="fade-in-left" easing="ease-in-out" duration="1200">
+                            <p class="jobTitle">
+                                <i class="bi bi-circle-fill"></i>
+                                <span class="text-break">
                   {{ jobTitle }}
                 </span>
-              </p>
-             </animatable-component>
-          </div>
-          <div v-if="!!photo" class="col-auto d-none d-lg-block d-print-block">
-            <animatable-component autoplay animation="rotateIn" easing="ease-in" duration="1200">
-              <img v-bind:src.prop="photo" class="photo border border-2 border-dark rounded-circle img-fluid float-end img-thumbnail">
-            </animatable-component>
-          </div>
-        </div>
-        <animatable-component autoplay animation="fadeInUpBig"  easing="ease-in-out" duration="1200">
-          <div class="middleLine position-absolute"></div>
-        </animatable-component>
-      </header>
-      <section class="content">
-        <div class="row">
-          <div class="col personal-details me-4">
-            <div class="row list-item me-5">
-              <div class="col-auto">
-                <animatable-component autoplay animation="heartBeat" easing="ease-in" duration="1200">
-                  <div class="icon d-flex justify-content-center">
-                    <i class="bi bi-geo-alt-fill" role="img" aria-label="Location"></i>
-                  </div>
+                            </p>
+                        </animatable-component>
+                    </div>
+                    <div v-if="!!photo" class="col-auto d-none d-lg-block d-print-block">
+                        <animatable-component autoplay animation="rotateIn" easing="ease-in" duration="1200">
+                            <img v-bind:src.prop="photo" class="photo border border-2 border-dark rounded-circle img-fluid float-end img-thumbnail">
+                        </animatable-component>
+                    </div>
+                </div>
+                <animatable-component autoplay animation="fadeInUpBig" easing="ease-in-out" duration="1200">
+                    <div class="middleLine position-absolute"></div>
                 </animatable-component>
-              </div>
-              <div class="col" style="white-space: pre-line;">
-                <p>{{ address }}</p>
-              </div>
-            </div>
-            <div v-if="!!phone" class="row list-item me-5">
-              <div class="col-auto align-self-center">
-                <animatable-component autoplay animation="swing" easing="ease-in" duration="1200">
-                  <div class="icon d-flex justify-content-center">
-                    <i class="bi bi-telephone-fill" role="img" aria-label="Telephone"></i>
-                  </div>
-                </animatable-component>
-              </div>
-              <div class="col">
-                <a v-bind:href="'tel:'+ phone" class="text-decoration-none">
-                  <p>{{ phone }}</p>
-                </a>
-              </div>
-            </div>
-            <div class="row list-item me-5">
-              <div class="col-auto align-self-center">
-                <animatable-component autoplay animation="flip" easing="ease-in" duration="1200">
-                  <div class="icon d-flex justify-content-center">
-                    <i class="bi bi-envelope-fill" role="img" aria-label="Email"></i>
-                  </div>
-                </animatable-component>
-              </div>
-              <div class="col">
-                <a v-bind:href="'mailto:'+ email" class="text-decoration-none">
-                  <p>{{ email }}</p>
-                </a>
-              </div>
-            </div>
-            <div class="row mt-5 me-5">
-              <div class="col">
-                <p class="title">Education</p>
-              </div>
-            </div>
-            <div class="row record" v-for="e in education">
-              <div class="col-auto bullet">
-                <i class="bi bi-record-circle"></i>
-              </div>
-              <div class="col">
-                <p class="fw-bold text-uppercase">
-                  {{ e.degree }}
-                </p>
-                <p class="fw-bold text-uppercase">
-                  {{ e.school }}, {{ e.graduationDate }}
-                </p>
-                <p>{{ e.description }}</p>
-              </div>
-            </div>
-            <div class="row mt-5 me-5">
-              <div class="col p-0">
-                <p class="title">Links</p>
-              </div>
-            </div>
-            <div class="row record me-5" v-for="l in links">
-              <div class="col-auto bullet mb-5">
-                <i class="bi bi-record-circle"></i>
-              </div>
-              <div class="col">
-                <p>
-                  {{ l.label }}:
-                  <a class="text-reset" target="_blank" v-bind:href.prop="l.link">
+            </header>
+            <section class="content">
+                <div class="row">
+                    <div class="col personal-details me-4">
+                        <div class="row list-item me-5">
+                            <div class="col-auto">
+                                <animatable-component autoplay animation="heartBeat" easing="ease-in" duration="1200">
+                                    <div class="icon d-flex justify-content-center">
+                                        <i class="bi bi-geo-alt-fill" role="img" aria-label="Location"></i>
+                                    </div>
+                                </animatable-component>
+                            </div>
+                            <div class="col" style="white-space: pre-line;">
+                                <p>{{ address }}</p>
+                            </div>
+                        </div>
+                        <div v-if="!!phone" class="row list-item me-5">
+                            <div class="col-auto align-self-center">
+                                <animatable-component autoplay animation="swing" easing="ease-in" duration="1200">
+                                    <div class="icon d-flex justify-content-center">
+                                        <i class="bi bi-telephone-fill" role="img" aria-label="Telephone"></i>
+                                    </div>
+                                </animatable-component>
+                            </div>
+                            <div class="col">
+                                <a v-bind:href="'tel:'+ phone" class="text-decoration-none">
+                                    <p>{{ phone }}</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row list-item me-5">
+                            <div class="col-auto align-self-center">
+                                <animatable-component autoplay animation="flip" easing="ease-in" duration="1200">
+                                    <div class="icon d-flex justify-content-center">
+                                        <i class="bi bi-envelope-fill" role="img" aria-label="Email"></i>
+                                    </div>
+                                </animatable-component>
+                            </div>
+                            <div class="col">
+                                <a v-bind:href="'mailto:'+ email" class="text-decoration-none">
+                                    <p>{{ email }}</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-5 me-5">
+                            <div class="col">
+                                <p class="title">Education</p>
+                            </div>
+                        </div>
+                        <div class="row record" v-for="e in education">
+                            <div class="col-auto bullet">
+                                <i class="bi bi-record-circle"></i>
+                            </div>
+                            <div class="col">
+                                <p class="fw-bold text-uppercase">
+                                    {{ e.degree }}
+                                </p>
+                                <p class="fw-bold text-uppercase">
+                                    {{ e.school }}, {{ e.graduationDate }}
+                                </p>
+                                <p>{{ e.description }}</p>
+                            </div>
+                        </div>
+                        <div class="row mt-5 me-5">
+                            <div class="col p-0">
+                                <p class="title">Links</p>
+                            </div>
+                        </div>
+                        <div class="row record me-5" v-for="l in links">
+                            <div class="col-auto bullet mb-5">
+                                <i class="bi bi-record-circle"></i>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    {{ l.label }}:
+                                    <a class="text-reset" target="_blank" v-bind:href.prop="l.link">
                     {{ l.link }}
                   </a>
-                </p>
-              </div>
-            </div>
-            <div class="row mt-5 me-5">
-              <div class="col p-0">
-                <p class="title">Skills</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <ul class="ms-2">
-                  <li class="pb-2" v-for="skill in skills">
-                    {{ skill }}
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="row mt-5 me-5">
-              <div class="col p-0">
-                <p class="title">Languages</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <ul class="ms-2">
-                  <li class="pb-2" v-for="language in languages">
-                    {{ language }}
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col col-8">
-            <animatable-component
-              autoplay
-              animation="fade-in-right"
-              easing="ease-in-out"
-              duration="1200"
-            >
-              <div class="row bullet">
-              <div class="col-auto pt-2">
-                <i class="bi bi-circle-fill"></i>
-              </div>
-              <div class="col">
-                <p class="title">About Me</p>
-              </div>
-            </div>
-            </animatable-component>
-            <animatable-component
-              autoplay
-              animation="fade-in-right"
-              easing="ease-in-out"
-              duration="1200"
-            >
-              <div class="row record bullet">
-              <div class="col-auto">
-                <i class="bi bi-record-circle"></i>
-              </div>
-              <div class="col">
-                <p style="white-space: pre-line;">{{ professionalSummary }}</p>
-              </div>
-            </div>
-            </animatable-component>
-            <div class="row mt-5">
-              <div class="col-auto bullet pt-2">
-                <i class="bi bi-circle-fill"></i>
-              </div>
-              <div class="col">
-                <p class="title">Work Experience</p>
-              </div>
-            </div>
-            <div class="row record mb-4 bullet" v-for="employment in employmentHistory">
-              <div class="col-auto">
-                <i class="bi bi-record-circle"></i>
-              </div>
-              <div class="col">
-                <p class="text-uppercase fw-bold position-relative">
-                  {{ employment.jobTitle }}
-                  <span>&nbsp;|&nbsp;{{ employment.startDate }} - {{ employment.endDate }}</span>
-                </p>
-                <p class="text-lowercase fst-italic fw-bold">
-                  {{ employment.employer }}, {{ employment.city }}
-                </p>
-                <p class="mb-0" v-for="achievement in employment.achievements">
-                  • {{ achievement }}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </section>
-    <div class="btn-group-fab d-print-none">
-      <div>
-        <button onclick="javascript:window.print()" type="button" class="btn btn-main btn-primary" title="Print">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row mt-5 me-5">
+                            <div class="col p-0">
+                                <p class="title">Skills</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <ul class="ms-2">
+                                    <li class="pb-2" v-for="skill in skills">
+                                        {{ skill }}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row mt-5 me-5">
+                            <div class="col p-0">
+                                <p class="title">Languages</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <ul class="ms-2">
+                                    <li class="pb-2" v-for="language in languages">
+                                        {{ language }}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-8">
+                        <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
+                            <div class="row bullet">
+                                <div class="col-auto pt-2">
+                                    <i class="bi bi-circle-fill"></i>
+                                </div>
+                                <div class="col">
+                                    <p class="title">About Me</p>
+                                </div>
+                            </div>
+                        </animatable-component>
+                        <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
+                            <div class="row record bullet">
+                                <div class="col-auto">
+                                    <i class="bi bi-record-circle"></i>
+                                </div>
+                                <div class="col">
+                                    <p style="white-space: pre-line;">{{ professionalSummary }}</p>
+                                </div>
+                            </div>
+                        </animatable-component>
+                        <div class="row mt-5">
+                            <div class="col-auto bullet pt-2">
+                                <i class="bi bi-circle-fill"></i>
+                            </div>
+                            <div class="col">
+                                <p class="title">Work Experience</p>
+                            </div>
+                        </div>
+                        <div class="row record mb-4 bullet" v-for="employment in employmentHistory">
+                            <div class="col-auto">
+                                <i class="bi bi-record-circle"></i>
+                            </div>
+                            <div class="col">
+                                <p class="text-uppercase fw-bold position-relative">
+                                    {{ employment.jobTitle }}
+                                    <span>&nbsp;|&nbsp;{{ employment.startDate }} - {{ employment.endDate }}</span>
+                                </p>
+                                <p class="text-lowercase fst-italic fw-bold">
+                                    {{ employment.employer }}, {{ employment.city }}
+                                </p>
+                                <p class="mb-0" v-for="achievement in employment.achievements">
+                                    • {{ achievement }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <div class="btn-group-fab d-print-none">
+            <div>
+                <button onclick="javascript:window.print()" type="button" class="btn btn-main btn-primary" title="Print">
           <i class="bi bi-printer fs-3"></i>
         </button>
-      </div>
-    </div>
-    
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-  </body>
-</html>
-<!-- partial -->
-  <script  src="./script.js"></script>
+            </div>
+        </div>
+
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    </body>
+
+    </html>
+    <!-- partial -->
+    <script src="./script.js"></script>
 
 </body>
+
 </html>
