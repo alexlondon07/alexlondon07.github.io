@@ -2,30 +2,28 @@
  * Resume/CV template created with Bootstrap 5 by @vmoratog and @jdnichollsc
  */
 const resume = {
-    firstName: 'Alexander Andrés',
+    firstName: 'Alexander',
     lastName: 'Londoño Espejo',
-    jobTitle: 'Software Engineering',
-    city: 'Medellin',
+    jobTitle: 'Systems Engineerg',
+    city: 'Medellín',
     postalCode: '',
     country: 'Colombia',
-    phone: '+57 3122195522',
+    phone: '',
     email: 'alexlondon07@gmail.com',
-    education: [
-        {
-            school: 'Instituto Tecnológico Metropolitano ITM',
+    education: [{
+            school: 'METROPOLITAN TECHNOLOGICAL INSTITUTE ITM',
             degree: 'Bachelor',
             graduationDate: '2014',
-            description: 'Software Engineering'
+            description: 'Systems Engineer'
         },
         {
-            school: 'Instituto Tecnológico Metropolitano ITM',
+            school: 'METROPOLITAN TECHNOLOGICAL INSTITUTE ITM',
             degree: 'Bachelor',
             graduationDate: '2012',
             description: 'Information Systems Technologist'
         }
     ],
-    links: [
-        {
+    links: [{
             label: 'GitHub',
             link: 'https://github.com/alexlondon07'
         },
@@ -45,37 +43,33 @@ const resume = {
     skills: [
         'Java',
         'Spring Boot',
-        'Git',
         'PHP',
         'JavaScript',
         'TypeScript',
-        'Docker',
         'Microservices',
+        'Docker',
         'Spring',
-        'NodeJS',
+        'Devops',
         'Angular',
         'Azure',
-        'Devops',
-        'MySQL',
-        'Python Learning',
-        'Flutter Learning',
+        'Git',
+        'NodeJS',
         'React Native',
+        'MySQL',
         'PostgreSQL',
         'MongoDB',
-        'CakePHP'
+        'Python Learning',
+        'Flutter Learning',
     ],
-    languages: ['English', 'Spanish'],
+    languages: ['English - Native', 'Spanish - Intermediate'],
     professionalSummary: `Passionate about technology, code and coffee.☕
-  
-  Experienced Software Developer with a demonstrated history of working in the information technology and services industry. Skilled in Typescript, JavaScript, Java, PHP (Programming Language), (NoSQL), PostgreSQL, MySql, SQL Server, .Spring Boot, Spring, Angular and Azure Devops.
-  
+      Software Engineer and Informatics technologist with 9+ years of experience, accustomed to teamwork, customer experience, highly responsible, working under pressure, proactivity, dynamism, readiness for learning and knowledge, good at planning, management and implementation of projects.  
   🔭 I’m currently working on Angular and Spring Boot, Microservices, Docker
   🌱 I’m currently learning Python, Flutter, AWS...`,
-    employmentHistory: [
-        {
+    employmentHistory: [{
             jobTitle: 'Java Developer, Ssr Adv',
             startDate: 'August  2021',
-            endDate: 'Present',
+            endDate: 'Current',
             employer: 'Globant',
             city: 'Remote, Medellín/Colombia',
             achievements: [
@@ -83,8 +77,7 @@ const resume = {
                 'Developed story/task by following TDD/BDD and Pair programming concepts. Providing daily status in scrum meetings with the client.',
                 'Develop software tests with JUnit and Mockito',
                 'Work with agile methodologies (Scrum) and use of JIRA.',
-                'Environment: Java 8+, RESTAPI, Microservices Restful web Services (Spring Boot), Hystrix, Spring Config server, JSON, Log4j, Maven, Git, Junit, Mockito, Tomcat 9, CD (continuous deployment), DevOps with Docker, Spring Cloud, Relational Database, API gateway pattern, Jenkins.'
-
+                'Environment: Java 8,11, RESTAPI, Microservices Restful web Services (Spring Boot), Hystrix, Spring Config server, JSON, Log4j, Maven, Git, Junit, Mockito, Tomcat 9, CD (continuous deployment), DevOps with Docker, Spring Cloud, Relational Database, API gateway pattern, Jenkins.'
             ]
         },
         {
@@ -124,7 +117,7 @@ const resume = {
             jobTitle: 'Junior Analyst Developer',
             startDate: 'March 2017',
             endDate: 'March 2019',
-            employer: 'Grupo Réditos',
+            employer: 'Réditos Group',
             city: 'Medellín/Colombia',
             achievements: [
                 'Develop and support the implementations of client software requirements in order to ensure effective solutions, using Java, JavaScript as programming languages and Oracle Database Manager, also used technologies such as Android Studio for mobile application development..'
@@ -150,7 +143,6 @@ const resume = {
                 'Develop software using JavaScript as programming language and framework Angular 2, Typescript'
             ]
         },
-
         {
             jobTitle: 'Back-End Developer',
             startDate: '',
@@ -165,13 +157,21 @@ const resume = {
             ]
         },
     ],
-    courses: [
-        {
-            name: 'Solid',
-            company: 'Acamica',
-            date: 'Aug 2021',
+    courses: [{
+            name: 'Microservicios con Spring Boot y Spring Cloud Netflix Eureka',
+            company: 'Udemy',
+            date: 'March 2022',
         },
-
+        {
+            name: 'Java Streams API Developer Guide',
+            company: 'Udemy',
+            date: 'February 2022',
+        },
+        {
+            name: 'Business English: Easy English for Meetings',
+            company: 'Udemy',
+            date: 'February 2022',
+        },
         {
             name: 'Rest Systems in Java',
             company: 'Acamica',
@@ -182,17 +182,17 @@ const resume = {
             company: 'Acamica',
             date: 'Aug 2021',
         },
-              {
+        {
             name: 'Secure Development Workshop',
-            company: 'Netec ',
+            company: 'Netec',
             date: 'July 2021',
         },
-              {
+        {
             name: 'Diploma in Multiplatform Mobile Development with React Native',
             company: 'Cedesistemas',
             date: 'Aug 2018',
         },
-              {
+        {
             name: 'Development for Android mobile devices advanced level',
             company: 'Cedesistemas',
             date: 'Sep 2017',
