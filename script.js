@@ -43,27 +43,29 @@ const resume = {
     skills: [
         'Java',
         'Spring Boot',
+        'API REST',
         'PHP',
-        'JavaScript',
+        'Angular',
         'TypeScript',
+        'JavaScript',
         'Microservices',
         'Docker',
         'Spring',
         'Devops',
-        'Angular',
         'Azure',
-        'Git',
+        'GIT',
         'NodeJS',
         'React Native',
         'MySQL',
         'PostgreSQL',
         'MongoDB',
+        'Clean Architecture Learning',
         'Python Learning',
         'Flutter Learning',
     ],
     languages: ['English - Native', 'Spanish - Intermediate'],
     professionalSummary: `Passionate about technology, code and coffee.☕
-      Software Engineer and Informatics technologist with 9+ years of experience, accustomed to teamwork, customer experience, highly responsible, working under pressure, proactivity, dynamism, readiness for learning and knowledge, good at planning, management and implementation of projects.  
+      Software Engineer and Informatics technologist with 10+ years of experience, accustomed to teamwork, customer experience, highly responsible, working under pressure, proactivity, dynamism, readiness for learning and knowledge, good at planning, management and implementation of projects.  
   🔭 I’m currently working on Angular and Spring Boot, Microservices, Docker
   🌱 I’m currently learning Python, Flutter, AWS...`,
     employmentHistory: [{
@@ -73,10 +75,10 @@ const resume = {
             employer: 'Globant',
             city: 'Remote, Medellín/Colombia',
             achievements: [
-                'Develop solutions with Microservices using Java technologies and Spring Boot, MySQL',
+                'Develop solutions with Microservices using Java technologies and Spring Boot, MySQL, SQL Server',
                 'Developed story/task by following TDD/BDD and Pair programming concepts. Providing daily status in scrum meetings with the client.',
                 'Develop software tests with JUnit and Mockito',
-                'Work with agile methodologies (Scrum) and use of JIRA.',
+                'Work with agile methodologies (SCRUM) and use of JIRA.',
                 'Environment: Java 8,11, RESTAPI, Microservices Restful web Services (Spring Boot), Hystrix, Spring Config server, JSON, Log4j, Maven, Git, Junit, Mockito, Tomcat 9, CD (continuous deployment), DevOps with Docker, Spring Cloud, Relational Database, API gateway pattern, Jenkins.'
             ]
         },
@@ -158,6 +160,16 @@ const resume = {
         },
     ],
     courses: [{
+            name: 'Microservices Designing Highly Scalable Systemss',
+            company: 'Udemy',
+            date: 'April 2022',
+        },
+        {
+            name: 'Docker for Java Developers',
+            company: 'Udemy',
+            date: 'April 2022',
+        },
+        {
             name: 'Microservicios con Spring Boot y Spring Cloud Netflix Eureka',
             company: 'Udemy',
             date: 'March 2022',
@@ -198,7 +210,7 @@ const resume = {
             date: 'Sep 2017',
         }
     ],
-    photo: 'https://pbs.twimg.com/profile_images/1375628115599355906/z2wAwLQ9_400x400.jpg',
+    photo: 'https://pbs.twimg.com/profile_images/1538271881656147968/utku4wlw_400x400.jpg',
 }
 
 const formatResume = (r) => ({
