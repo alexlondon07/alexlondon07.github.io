@@ -32,10 +32,6 @@ const resume = {
             link: 'https://www.linkedin.com/in/alexanderlondono1/'
         },
         {
-            label: 'Website',
-            link: 'https://alexlondon07.github.io/'
-        },
-        {
             label: 'Twitter',
             link: 'https://twitter.com/alexlondon07'
         }
@@ -61,6 +57,7 @@ const resume = {
         'MongoDB',
         'Python Learning',
         'Flutter Learning',
+        'AWS Learning',
     ],
     languages: ['English - Intermediate ', 'Spanish - Native'],
     professionalSummary: `Passionate about technology, code and coffee.☕
@@ -159,6 +156,26 @@ const resume = {
         },
     ],
     courses: [{
+            name: 'Programación Reactiva con Spring Boot 2 y Spring WebFlux',
+            company: 'Udemy',
+            date: 'Octuber 2022',
+        },
+        {
+            name: 'Microservicios Spring Cloud Eureka & Angular Full-stack',
+            company: 'Udemy',
+            date: 'August 2022',
+        },
+        {
+            name: 'Patrones de diseño de software y principios SOLID.',
+            company: 'Udemy',
+            date: 'August 2022',
+        },
+        {
+            name: 'Principios SOLID y Clean Code',
+            company: 'Udemy',
+            date: 'August 2022',
+        },
+        {
             name: 'Spring Boot For Software Engineers',
             company: 'Udemy',
             date: 'August 2022',
