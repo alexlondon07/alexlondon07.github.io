@@ -4,7 +4,7 @@
 const resume = {
     firstName: 'Alexander',
     lastName: 'Londoño Espejo',
-    jobTitle: 'Systems Engineerg',
+    jobTitle: 'Systems Engineer',
     city: 'Medellín',
     postalCode: '',
     country: 'Colombia',
