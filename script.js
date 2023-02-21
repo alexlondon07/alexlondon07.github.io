@@ -41,15 +41,20 @@ const resume = {
         'Spring Boot',
         'Spring',
         'GIT',
+        'GitHub',
+        'DevOps with GitHub',
+        'Microservices',
+        'API REST',
+        'DevOps',
+        'Clean Architecture',
+        'Docker',
+        'Splunk',
+        'Grafana',
+        'AWS',
         'JavaScript',
         'PHP',
-        'Microservices',
-        'Docker',
         'Angular',
         'TypeScript',
-        'API REST',
-        'Devops',
-        'Clean Architecture',
         'Azure',
         'NodeJS',
         'MySQL',
@@ -57,25 +62,27 @@ const resume = {
         'MongoDB',
         'Python Learning',
         'Flutter Learning',
-        'AWS Learning',
     ],
     languages: ['English - Intermediate ', 'Spanish - Native'],
-    professionalSummary: `Passionate about technology, code and coffee.☕
-      Software Engineer and Informatics technologist with 10+ years of experience, accustomed to teamwork, customer experience, highly responsible, working under pressure, proactivity, dynamism, readiness for learning and knowledge, good at planning, management and implementation of projects.  
-  🔭 I’m currently working on Angular and Spring Boot, Microservices, Docker
-  🌱 I’m currently learning Python, Flutter, AWS...`,
+    professionalSummary: `Passionate about technology, code, and coffee.☕
+
+As a seasoned Software Engineer and Informatics Technologist with over 11 years of experience, I have a proven track record of delivering innovative solutions to complex problems. I have developed strong teamwork and customer experience skills throughout my career, and I'm comfortable working with a proactive and dynamic approach.
+
+I am highly responsible, detail-oriented, and always eager to learn and expand my knowledge base. I have excellent project planning, management, and implementation skills, and I'm proficient in various programming languages and tools, including JAVA, Spring, Spring Boot, PHP, JavaScript, Angular, DevOps, and Docker.
+
+My current focus is Spring Boot and Microservices, where I leverage my skills to build efficient, scalable, and secure solutions. Additionally, I'm continuously learning and exploring new technologies such as Microservices, Python, and AWS..`,
     employmentHistory: [{
             jobTitle: 'Java Developer, Ssr Adv',
             startDate: 'August  2021',
             endDate: 'Current',
             employer: 'Globant',
             city: 'Remote, Medellín/Colombia',
-            achievements: [
-                'Develop solutions with Microservices using Java technologies and Spring Boot, MySQL, SQL Server',
-                'Developed story/task by following TDD/BDD and Pair programming concepts. Providing daily status in scrum meetings with the client.',
-                'Develop software tests with JUnit and Mockito',
-                'Work with agile methodologies (SCRUM) and use of JIRA.',
-                'Environment: Java 8,11, RESTAPI, Microservices Restful web Services (Spring Boot), Hystrix, Spring Config server, JSON, Log4j, Maven, Git, Junit, Mockito, Tomcat 9, CD (continuous deployment), DevOps with Docker, Spring Cloud, Relational Database, API gateway pattern, Jenkins.'
+        achievements: [
+            'Help maintain the quality, organization, and automation of the entire application stack. Building Microservices with Spring Boot.',
+            'Write clean, readable codes, and fix bugs ',
+            'Use and contribute to the Continuous Integration and Continuous Delivery process (CI/CD).',
+            'Build and maintain new services with Java and Spring Boot, using best practices for Software architecture ',
+            'Environment, Tools, and Methodologies : Java 8,11, REST API, Microservices with (Spring Boot), Hystrix, Spring Config server, Log4j, Maven, Git, JUnit, Mockito, CD (continuous deployment), DevOps with Docker, Spring Cloud, Relational Database, API gateway pattern, Jenkins, Splunk, New Relic, AWS, Grafana, AppDynamics, Git, GitHub, Maven, Gradle, Jira, Scrum, MySQL, JPA ',
             ]
         },
         {
@@ -155,7 +162,18 @@ const resume = {
             ]
         },
     ],
-    courses: [{
+    courses: [
+        {
+            name: 'MicroServices con Spring cloud . In process',
+            company: '',
+            date: '',
+        },
+        {
+            name: 'Build Reactive MicroServices using Spring WebFlux/SpringBoot',
+            company: 'Udemy',
+            date: 'February 2023',
+        },
+        {
             name: 'Programación Reactiva con Spring Boot 2 y Spring WebFlux',
             company: 'Udemy',
             date: 'Octuber 2022',
