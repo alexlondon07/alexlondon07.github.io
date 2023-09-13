@@ -155,7 +155,7 @@
                         <div class="row">
                             <div class="col">
                                 <ul class="ms-2">
-                                    <li class="pb-2" v-for="language in languages">
+                                    <li class="pb-2 fw-bold" v-for="language in languages">
                                         {{ language }}
                                     </li>
                                 </ul>
@@ -221,14 +221,15 @@
                         <div class="row">
                             <div class="col">
                                 <ul class="ms-2">
-                                    <li class="pb-2" v-for="course in courses">{{ course.name }}
-                                        <p class="white-space: pre-line"> {{ course.company }}</p>
+                                    <li class="pb-2" v-for="course in courses ">{{ course.name }}
+                                        <p class="white-space: pre-line fw-bold"> {{ course.company }}</p>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </section>
         </section>
         <div class="btn-group-fab d-print-none">

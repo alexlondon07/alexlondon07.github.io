@@ -50,13 +50,13 @@ const resume = {
         'Docker',
         'Splunk',
         'Grafana',
+        'New Relic',
         'AWS',
         'JavaScript',
         'PHP',
         'Angular',
         'TypeScript',
         'Azure',
-        'NodeJS',
         'MySQL',
         'PostgreSQL',
         'MongoDB',
@@ -82,7 +82,9 @@ My current focus is Spring Boot and Microservices, where I leverage my skills to
             'Write clean, readable codes, and fix bugs ',
             'Use and contribute to the Continuous Integration and Continuous Delivery process (CI/CD).',
             'Build and maintain new services with Java and Spring Boot, using best practices for Software architecture ',
-            'Environment, Tools, and Methodologies : Java 8,11, REST API, Microservices with (Spring Boot), Hystrix, Spring Config server, Log4j, Maven, Git, JUnit, Mockito, CD (continuous deployment), DevOps with Docker, Spring Cloud, Relational Database, API gateway pattern, Jenkins, Splunk, New Relic, AWS, Grafana, AppDynamics, Git, GitHub, Maven, Gradle, Jira, Scrum, MySQL, JPA ',
+            'Project Disney Parks: Support the food and beverage area of mobile ordering at Disney Parks',
+            'Project Disney Cruise Line and Project BetterMe4Glb by Globant: Working Spring Boot',
+            'Environment, Tools, and Methodologies : Java 8,11, REST API, Microservices with (Spring Boot), Hystrix, Spring Config server, Log4j, Maven, Git, JUnit, Mockito, CD (continuous deployment), DevOps with Docker, Spring Cloud, Relational Database, API gateway pattern, Jenkins, Splunk, New Relic, AWS, Grafana, AppDynamics, Git, GitHub, Maven, Gradle, Jira, Scrum, MySQL, JPA, AWS, Confluence ',
             ]
         },
         {
@@ -163,6 +165,11 @@ My current focus is Spring Boot and Microservices, where I leverage my skills to
         },
     ],
     courses: [
+        {
+            name: 'MicSI Associate Certification Program',
+            company: 'Mongo DB',
+            date: '2023-05-26',
+        },
         {
             name: 'MicroServices con Spring cloud . In process',
             company: '',
