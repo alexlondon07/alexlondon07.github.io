@@ -166,6 +166,26 @@ My current focus is Spring Boot and Microservices, where I leverage my skills to
     ],
     courses: [
         {
+            name: 'SI Architect Certification Program',
+            company: 'Mongo DB',
+            date: '2024-08-27',
+        },
+        {
+            name: 'B1_Intermediate',
+            company: 'English Services',
+            date: '2024-09-02',
+        },
+        {
+            name: 'Apache Kafka con Java, Spring framework y AWS',
+            company: 'Udemy',
+            date: '2024-04-02',
+        },
+        {
+            name: 'AWS Technical Essentials',
+            company: 'Amazon Web Services (AWS)',
+            date: '2024-01-01',
+        },
+        {
             name: 'MicSI Associate Certification Program',
             company: 'Mongo DB',
             date: '2023-05-26',
