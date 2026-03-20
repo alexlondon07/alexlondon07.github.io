@@ -2,9 +2,9 @@
  * Resume/CV template created with Bootstrap 5 by @vmoratog and @jdnichollsc
  */
 const resume = {
-  firstName: "Alexander",
+  firstName: "Alexander Andrés",
   lastName: "Londoño Espejo",
-  jobTitle: "Systems Engineer",
+  jobTitle: "Senior Java Developer & Software Engineer",
   city: "Medellín",
   postalCode: "",
   country: "Colombia",
@@ -78,7 +78,45 @@ const resume = {
     "AppDynamics",
     "AI",
   ],
-  languages: ["English - Intermediate ", "Spanish - Native"],
+  languages: ["English - B2 Intermediate", "Spanish - Native"],
+  stats: [
+    { value: "11+", label: "Years of Experience" },
+    { value: "8+",  label: "Companies" },
+    { value: "3",   label: "International Projects" },
+    { value: "4",   label: "LinkedIn Recommendations" },
+  ],
+  certifications: [
+    {
+      name: "SI Architect Certification Program",
+      issuer: "MongoDB",
+      date: "Aug 2024",
+      icon: "bi-patch-check-fill",
+    },
+    {
+      name: "Associate Certification Program",
+      issuer: "MongoDB",
+      date: "May 2023",
+      icon: "bi-patch-check-fill",
+    },
+    {
+      name: "AWS Technical Essentials",
+      issuer: "Amazon Web Services",
+      date: "Jan 2024",
+      icon: "bi-cloud-fill",
+    },
+    {
+      name: "B2 Intermediate English",
+      issuer: "English Services",
+      date: "Sep 2024",
+      icon: "bi-translate",
+    },
+  ],
+  notableClients: [
+    { name: "Disney Parks",     icon: "bi-star-fill",       description: "Mobile ordering platform — food & beverage" },
+    { name: "British Airways",  icon: "bi-airplane-fill",   description: "Microservices & cloud migration — AWS" },
+    { name: "Disney Cruise Line", icon: "bi-water",         description: "Spring Boot backend services" },
+    { name: "Globant BetterMe", icon: "bi-heart-pulse-fill", description: "Java, Spring Cloud, AWS, New Relic" },
+  ],
   professionalSummary: `Passionate about technology, code, and coffee.☕
 
 As a seasoned Software Engineer and Informatics Technologist with over 11 years of experience, I have a proven track record of delivering innovative solutions to complex problems. I have developed strong teamwork and customer experience skills throughout my career, and I'm comfortable taking a proactive and dynamic approach.

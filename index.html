@@ -65,6 +65,13 @@
                 <animatable-component autoplay animation="fadeInUpBig" easing="ease-in-out" duration="1200">
                     <div class="middleLine position-absolute"></div>
                 </animatable-component>
+                <!-- Stats bar -->
+                <div class="stats-bar">
+                    <div class="stat-item" v-for="stat in stats">
+                        <span class="stat-value">{{ stat.value }}</span>
+                        <span class="stat-label">{{ stat.label }}</span>
+                    </div>
+                </div>
             </header>
             <section class="content">
                 <div class="row">
@@ -176,6 +183,23 @@
 
                     <!-- Columna derecha: about me, experiencia, cursos -->
                     <div class="col-12 col-lg-8 main-content">
+
+                        <!-- Notable Clients -->
+                        <div class="row mb-2">
+                            <div class="col">
+                                <p class="title">Notable Clients</p>
+                                <div class="notable-clients-grid">
+                                    <div class="notable-client-card" v-for="client in notableClients">
+                                        <i v-bind:class="'bi ' + client.icon + ' client-icon'"></i>
+                                        <div class="client-info">
+                                            <span class="client-name">{{ client.name }}</span>
+                                            <span class="client-desc">{{ client.description }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
                             <div class="row bullet">
                                 <div class="col-auto pt-2">
@@ -211,21 +235,34 @@
                                 <i class="bi bi-record-circle"></i>
                             </div>
                             <div class="col">
-                                <p class="text-uppercase fw-bold position-relative">
-                                    {{ employment.jobTitle }}
-                                    <span>&nbsp;|&nbsp;{{ employment.startDate }} - {{ employment.endDate }}</span>
-                                </p>
-                                <p class="text-lowercase fst-italic fw-bold">
-                                    {{ employment.employer }}, {{ employment.city }}
-                                </p>
-                                <br>
-                                <p class="mb-0" v-for="achievement in employment.achievements">
+                                <div class="job-header">
+                                    <div class="job-title-text">{{ employment.jobTitle }}</div>
+                                    <div class="job-dates">{{ employment.startDate }} — {{ employment.endDate }}</div>
+                                    <div class="job-employer">{{ employment.employer }}, {{ employment.city }}</div>
+                                </div>
+                                <p class="mb-0 achievement-line" v-for="achievement in employment.achievements">
                                     • {{ achievement }}
-                                    <br>
                                 </p>
                                 <br>
                             </div>
                         </div>
+                        <!-- Certifications -->
+                        <div class="row mt-5">
+                            <div class="col p-0">
+                                <p class="title">Certifications</p>
+                            </div>
+                        </div>
+                        <div class="certifications-grid">
+                            <div class="cert-card" v-for="cert in certifications">
+                                <i v-bind:class="'bi ' + cert.icon + ' cert-icon'"></i>
+                                <div class="cert-info">
+                                    <span class="cert-name">{{ cert.name }}</span>
+                                    <span class="cert-issuer">{{ cert.issuer }}</span>
+                                    <span class="cert-date">{{ cert.date }}</span>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="row mt-5">
                             <div class="col p-0">
                                 <p class="title">Courses</p>

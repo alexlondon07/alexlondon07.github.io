@@ -1,10 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap");
+
+/* ─── Variables ─────────────────────────────────────────────── */
+:root {
+  --accent:       #0f766e;
+  --accent-light: #ccfbf1;
+  --dark:         #1e2a2a;
+  --gray:         #3e3e3e;
+  --text:         #4a4a4a;
+  --text-light:   #666766;
+  --border:       #e0e0e0;
+  --bg-subtle:    #f8fffe;
+}
+
+/* ─── Reset / Base ──────────────────────────────────────────── */
 * {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizelegibility;
+  text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
           text-size-adjust: 100%;
@@ -16,7 +30,7 @@ html {
 }
 
 .container-fluid {
-  padding: 0 10% !important;
+  padding: 0 8% !important;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -26,77 +40,95 @@ ul {
 }
 
 li::marker {
-  color: black;
+  color: var(--accent);
 }
 
 p {
-  font-size: 2.48262rem;
-  letter-spacing: 0.115103rem;
-  color: #666766;
+  font-size: 2.3rem;
+  letter-spacing: 0.08rem;
+  color: var(--text-light);
   word-break: break-word;
-  justify-content: center;
   hyphens: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* ─── Header ────────────────────────────────────────────────── */
+.header {
+  padding-top: 14rem;
+  padding-bottom: 8rem;
+  direction: ltr;
+  margin-bottom: 3rem;
+  border-top: 5px solid var(--accent);
 }
 
 .headLine {
   width: 0.225693rem;
-  top: 0px;
+  top: 5px;           /* debajo del borde de acento */
   left: 1rem;
   height: 11.9617rem;
-  background-color: #292929;
+  background-color: var(--accent);
 }
 
-.header {
-  padding-top: 17.8297rem;
-  padding-bottom: 10rem;
-  direction: ltr;
-  margin-bottom: 3rem;
+.middleLine {
+  width: 0.225693rem;
+  bottom: 3.1597rem;
+  left: 1rem;
+  height: 5.64232rem;
+  background-color: var(--accent);
 }
 
 .firstName {
-  font-weight: lighter;
+  font-weight: 300;
   text-transform: uppercase;
-  word-break: break-all;
-  color: #3e3e3e;
+  word-break: break-word;
+  color: var(--gray);
   font-size: 6.65793rem;
   line-height: 1.68;
-  letter-spacing: 3.89546rem;
-  margin-bottom: 1.12846rem;
+  letter-spacing: 3.5rem;
+  margin-bottom: 1rem;
   direction: ltr;
 }
 
 .lastName {
-  font-weight: bold;
-  font-size: 9.02771rem;
+  font-weight: 700;
+  font-size: 9rem;
   text-transform: uppercase;
   word-break: break-word;
-  padding-right: 5.64232rem;
-  color: #3e3e3e;
+  padding-right: 4rem;
+  color: var(--dark);
   line-height: 1.09;
-  letter-spacing: 4.15952rem;
+  letter-spacing: 3.8rem;
   direction: ltr;
 }
 
 .jobTitle {
-  padding-right: 0px;
-  margin-top: 4.51385rem;
-  color: #292929;
-}
-.jobTitle span {
-  padding-left: 1rem;
-  letter-spacing: 0.710932rem;
-  text-transform: uppercase;
-  word-break: break-all;
-  direction: ltr;
-  color: #4c4a4a;
-  font-size: 3.04685rem;
+  padding-right: 0;
+  margin-top: 3.5rem;
+  color: var(--accent);
 }
 
+.jobTitle .bi-circle-fill {
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+.jobTitle span {
+  padding-left: 1rem;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
+  word-break: break-word;
+  direction: ltr;
+  color: var(--accent);
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+/* ─── Foto ──────────────────────────────────────────────────── */
 .photo-wrapper {
   width: 27.2rem;
   height: 27.2rem;
   border-radius: 50%;
-  background: linear-gradient(110deg, #e8e8e8 30%, #f5f5f5 50%, #e8e8e8 70%);
+  background: linear-gradient(110deg, #e0f2f1 30%, #f0fdfa 50%, #e0f2f1 70%);
   background-size: 200% 100%;
   animation: photo-skeleton 1.4s ease infinite;
 }
@@ -112,6 +144,7 @@ p {
   max-height: 270px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-color: var(--accent) !important;
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -120,61 +153,54 @@ p {
   opacity: 1;
 }
 
-.middleLine {
-  width: 0.225693rem;
-  bottom: 3.1597rem;
-  left: 1rem;
-  height: 5.64232rem;
-  background-color: #292929;
-}
-
+/* ─── Iconos de contacto ────────────────────────────────────── */
 .icon {
   width: 5rem;
   height: 5rem;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: white;
-  background-color: #3e3e3e;
+  background-color: var(--accent);
   border-radius: 50%;
   padding: 0.7rem;
 }
 
 a p {
   word-break: break-all;
-  color: #666766;
+  color: var(--text-light);
 }
 
 .list-item {
-  padding-top: 2.03123rem;
-  padding-bottom: 2.03123rem;
-  margin-right: 1rem;
-}
-.list-item:not(:last-child) {
-  border-bottom: 0.225693rem solid #231f20;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
+.list-item:not(:last-child) {
+  border-bottom: 1px solid var(--border);
+}
+
+/* ─── Títulos de sección ────────────────────────────────────── */
 .title {
   width: 100%;
-  font-weight: bold;
-  font-size: 4rem;
+  font-weight: 700;
+  font-size: 3.6rem;
   text-transform: uppercase;
-  line-height: 4.5rem;
-  border-bottom: 1px solid #231f20;
-  padding-top: 0rem;
-  padding-bottom: 3.8rem;
-  color: #222121;
-  letter-spacing: 1.01562rem;
-  margin-bottom: 1.8rem;
+  line-height: 4rem;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 1.2rem;
+  color: var(--dark);
+  letter-spacing: 0.8rem;
+  margin-bottom: 2rem;
 }
 
 .personal-details .title {
   padding-top: 4rem;
 }
 
-/* Links cards */
+/* ─── Links ─────────────────────────────────────────────────── */
 .links-list {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
@@ -182,153 +208,391 @@ a p {
 .link-card {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  padding: 1.2rem 1.5rem;
+  gap: 1.4rem;
+  padding: 1rem 1.4rem;
   border-radius: 8px;
-  border: 1px solid #e0e0e0;
-  background: #fafafa;
+  border: 1px solid var(--border);
+  background: var(--bg-subtle);
   text-decoration: none;
   color: inherit;
   transition: all 0.2s ease;
 }
 
 .link-card:hover {
-  background: #f0f0f0;
-  border-color: #3e3e3e;
+  border-color: var(--accent);
+  background: var(--accent-light);
   transform: translateX(4px);
 }
 
 .link-card-icon {
-  width: 4.5rem;
-  height: 4.5rem;
-  min-width: 4.5rem;
-  background: #3e3e3e;
+  width: 4.2rem;
+  height: 4.2rem;
+  min-width: 4.2rem;
+  background: var(--accent);
   color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 .link-card-text {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.2rem;
   overflow: hidden;
 }
 
 .link-card-label {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 700;
-  color: #3e3e3e;
+  color: var(--dark);
   letter-spacing: 0.05rem;
 }
 
 .link-card-url {
-  font-size: 1.8rem;
-  color: #888;
+  font-size: 1.7rem;
+  color: var(--text-light);
   word-break: break-all;
   font-weight: 400;
   letter-spacing: 0;
 }
 
-@media (max-width: 576px) {
-  .link-card-label {
-    font-size: 1.9rem;
-  }
-  .link-card-url {
-    font-size: 1.5rem;
-  }
-  .link-card-icon {
-    width: 3.8rem;
-    height: 3.8rem;
-    min-width: 3.8rem;
-    font-size: 1.8rem;
-  }
+/* ─── Skills (pill tags) ────────────────────────────────────── */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-@media print {
-  .links-list {
-    gap: 0.8rem;
-  }
-  .link-card {
-    padding: 0.8rem 1rem;
-    border-radius: 4px;
-    background: #fff;
-    break-inside: avoid;
-  }
-  .link-card:hover {
-    transform: none;
-  }
-  .link-card-icon {
-    width: 3.5rem;
-    height: 3.5rem;
-    min-width: 3.5rem;
-    font-size: 1.8rem;
-  }
-  .link-card-label {
-    font-size: 1.8rem;
-  }
-  .link-card-url {
-    font-size: 1.5rem;
-  }
+.skill-item {
+  background: var(--accent-light);
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  padding: 0.5rem 1.4rem;
+  transition: all 0.2s ease;
 }
 
-/* Separador entre columnas en desktop */
-@media (min-width: 992px) {
-  .personal-details {
-    border-right: 0.225693rem solid #e0e0e0;
-    padding-right: 3rem;
-  }
-
-  .main-content {
-    padding-left: 3rem;
-  }
+.skill-item:hover {
+  background: var(--accent);
 }
 
+.skill-item:hover p {
+  color: white;
+}
+
+.skill-item p {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.02rem;
+  white-space: nowrap;
+}
+
+/* ─── Bullets / Timeline ────────────────────────────────────── */
 .bullet {
   position: relative;
 }
+
 .bullet i {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
+  color: var(--accent);
 }
+
 .bullet:before {
   content: "";
   position: absolute;
   left: 1.9rem;
   width: 0.3rem;
   height: 70%;
-  background-color: #292929;
-  margin-top: 4.2rem;
+  background-color: var(--border);
+  margin-top: 4rem;
 }
 
 .record {
   padding-top: 2rem;
 }
+
 .record p {
   width: 100%;
-  font-size: 2.7rem;
-  line-height: 1.33;
-  color: #666766;
+  font-size: 2.4rem;
+  line-height: 1.5;
+  color: var(--text-light);
   word-break: break-word;
   display: block;
 }
 
+/* ─── Experiencia laboral ───────────────────────────────────── */
+.job-header {
+  border-left: 3px solid var(--accent);
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.job-title-text {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.job-dates {
+  font-size: 1.9rem;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.job-employer {
+  font-size: 2.1rem;
+  font-style: italic;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+/* ─── Cursos ────────────────────────────────────────────────── */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.course-item {
+  background: #fff;
+  padding: 1.2rem 1.4rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+  transition: all 0.2s ease;
+}
+
+.course-item:hover {
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.12);
+  transform: translateY(-2px);
+}
+
+.course-name {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+
+.course-company {
+  font-size: 1.7rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.course-date {
+  font-size: 1.5rem;
+  color: #999;
+  font-style: italic;
+}
+
+/* ─── Stats bar (header) ────────────────────────────────────── */
+.stats-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 3rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.stat-value {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: 0.05rem;
+}
+
+.stat-label {
+  font-size: 1.6rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .stats-bar {
+    justify-content: center;
+    gap: 1.5rem 2.5rem;
+    margin-top: 2rem;
+  }
+  .stat-item {
+    align-items: center;
+  }
+  .stat-value {
+    font-size: 3.2rem;
+  }
+  .stat-label {
+    font-size: 1.4rem;
+  }
+}
+
+/* ─── Notable Clients ───────────────────────────────────────── */
+.notable-clients-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.notable-client-card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 1.4rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--bg-subtle) 0%, var(--accent-light) 100%);
+  border: 1px solid rgba(15, 118, 110, 0.2);
+  transition: all 0.2s ease;
+}
+
+.notable-client-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.15);
+  transform: translateY(-2px);
+}
+
+.client-icon {
+  font-size: 2.8rem;
+  color: var(--accent);
+  min-width: 2.8rem;
+}
+
+.client-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  overflow: hidden;
+}
+
+.client-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark);
+  white-space: nowrap;
+}
+
+.client-desc {
+  font-size: 1.6rem;
+  color: var(--text-light);
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .notable-clients-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Certifications ────────────────────────────────────────── */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cert-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.4rem;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  transition: all 0.2s ease;
+  break-inside: avoid;
+}
+
+.cert-card:hover {
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.12);
+  transform: translateY(-2px);
+}
+
+.cert-icon {
+  font-size: 2.8rem;
+  color: var(--accent);
+  min-width: 2.8rem;
+  margin-top: 0.2rem;
+}
+
+.cert-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.cert-name {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.3;
+}
+
+.cert-issuer {
+  font-size: 1.6rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.cert-date {
+  font-size: 1.4rem;
+  color: #999;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Achievement bullets ───────────────────────────────────── */
+.achievement-line {
+  padding-left: 1.5rem;
+  text-indent: -1.5rem;
+  margin-bottom: 0.6rem !important;
+  line-height: 1.6;
+}
+
+/* ─── Li / Span base ────────────────────────────────────────── */
 li {
-  font-family: Raleway;
-  line-height: 1.33;
-  font-size: 2.8806rem;
-  color: #7b7b7b;
+  font-family: Raleway, sans-serif;
+  line-height: 1.5;
+  font-size: 2.6rem;
+  color: var(--text-light);
 }
 
 span {
-  color: #666766;
-  font-size: 2.28048rem;
+  color: var(--text-light);
+  font-size: 2.2rem;
   line-height: 1.2;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.3rem;
 }
 
+/* ─── Botón imprimir ────────────────────────────────────────── */
 .btn-group-fab {
   position: fixed;
   width: 50px;
@@ -348,442 +612,573 @@ span {
   bottom: 0;
   border-radius: 50%;
   display: block;
-  margin-bottom: 4px;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   margin: 4px auto;
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.35);
 }
 
-/* Responsive Design */
+/* ─── Separador entre columnas (desktop) ────────────────────── */
+@media (min-width: 992px) {
+  .personal-details {
+    border-right: 1px solid var(--border);
+    padding-right: 3.5rem;
+  }
+
+  .main-content {
+    padding-left: 3.5rem;
+  }
+}
+
+/* ─── Responsive 1200px ─────────────────────────────────────── */
 @media (max-width: 1200px) {
   .container-fluid {
     padding: 0 5% !important;
   }
-  
+
   .firstName {
     font-size: 5rem;
     letter-spacing: 2rem;
   }
-  
+
   .lastName {
     font-size: 7rem;
-    letter-spacing: 3rem;
+    letter-spacing: 2.8rem;
   }
 }
 
+/* ─── Responsive 992px ──────────────────────────────────────── */
 @media (max-width: 992px) {
   .container-fluid {
     padding: 0 3% !important;
   }
-  
+
   .header {
     padding-top: 10rem;
     padding-bottom: 5rem;
   }
-  
+
   .firstName {
     font-size: 4rem;
     letter-spacing: 1.5rem;
   }
-  
+
   .lastName {
     font-size: 5.5rem;
     letter-spacing: 2rem;
   }
-  
+
   .jobTitle span {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     letter-spacing: 0.5rem;
   }
-  
+
   .photo-wrapper {
     width: 20rem;
     height: 20rem;
   }
+
   .photo {
     width: 20rem;
     height: 20rem;
     max-height: 200px;
   }
-  
+
   .title {
-    font-size: 3.5rem;
-    letter-spacing: 0.8rem;
+    font-size: 3.2rem;
+    letter-spacing: 0.6rem;
   }
-  
+
   p {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
-  
+
   li {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
   }
 }
 
+/* ─── Responsive 768px ──────────────────────────────────────── */
 @media (max-width: 768px) {
   .container-fluid {
-    padding: 0 2% !important;
+    padding: 0 4% !important;
   }
-  
+
   .header {
-    padding-top: 8rem;
+    padding-top: 6rem;
     padding-bottom: 4rem;
     text-align: center;
   }
-  
+
   .firstName {
     font-size: 3.5rem;
     letter-spacing: 1rem;
     text-align: center;
   }
-  
+
   .lastName {
     font-size: 4.5rem;
-    letter-spacing: 1.5rem;
+    letter-spacing: 1.2rem;
     text-align: center;
     padding-right: 0 !important;
   }
-  
+
   .jobTitle {
     text-align: center;
     margin-top: 2rem;
   }
-  
+
   .jobTitle span {
     font-size: 2rem;
     letter-spacing: 0.3rem;
   }
-  
+
   .photo-wrapper {
     width: 15rem;
     height: 15rem;
     margin: 2rem auto;
   }
+
   .photo {
     width: 15rem;
     height: 15rem;
     max-height: 150px;
     display: block !important;
   }
-  
+
   .personal-details {
     margin-right: 0 !important;
     margin-bottom: 3rem;
     border-right: none !important;
     padding-right: 0 !important;
-    border-bottom: 0.225693rem solid #e0e0e0;
+    border-bottom: 1px solid var(--border);
     padding-bottom: 3rem;
   }
 
   .main-content {
     padding-left: 0 !important;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
-  
+
   .title {
-    font-size: 3rem;
-    letter-spacing: 0.5rem;
+    font-size: 2.8rem;
+    letter-spacing: 0.4rem;
     line-height: 3.5rem;
   }
-  
+
   p {
     font-size: 2rem;
-    word-break: break-word;
   }
-  
+
   li {
     font-size: 2.2rem;
   }
-  
+
   .record p {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
-  
+
   .list-item {
     margin-right: 0;
   }
-  
+
   .headLine, .middleLine {
     display: none;
   }
-  
+
   .bullet:before {
     display: none;
   }
-}
 
-@media (max-width: 576px) {
-  .container-fluid {
-    padding: 0 1% !important;
-  }
-  
-  .firstName {
-    font-size: 2.8rem;
-    letter-spacing: 0.8rem;
-  }
-  
-  .lastName {
-    font-size: 3.5rem;
-    letter-spacing: 1rem;
-  }
-  
-  .jobTitle span {
-    font-size: 1.8rem;
-    letter-spacing: 0.2rem;
-  }
-  
-  .title {
-    font-size: 2.5rem;
-    letter-spacing: 0.3rem;
-    line-height: 3rem;
-  }
-  
-  p {
-    font-size: 1.8rem;
-  }
-  
-  li {
-    font-size: 2rem;
-  }
-  
-  .record p {
-    font-size: 2rem;
-  }
-  
-  .icon {
-    width: 4rem;
-    height: 4rem;
-    font-size: 2rem;
-  }
-  
-  .photo-wrapper {
-    width: 12rem;
-    height: 12rem;
-  }
-  .photo {
-    width: 12rem;
-    height: 12rem;
-    max-height: 120px;
-  }
-}
-
-/* Skills Grid Layout */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.skill-item {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  border-left: 4px solid #3e3e3e;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.skill-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  border-left-color: #666766;
-}
-
-.skill-item p {
-  margin: 0;
-  font-size: 2.2rem;
-  color: #3e3e3e;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
   .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 0.8rem;
-  }
-  
-  .skill-item {
-    padding: 0.8rem 1.2rem;
-  }
-  
-  .skill-item p {
-    font-size: 1.9rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
     gap: 0.6rem;
   }
-  
-  .skill-item {
-    padding: 0.7rem 1rem;
-  }
-  
+
   .skill-item p {
     font-size: 1.7rem;
   }
 }
 
-/* Courses Grid Layout */
-.courses-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-.course-item {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  border: 1px solid #e9ecef;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.course-item:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #3e3e3e 0%, #666766 100%);
-}
-
-.course-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-}
-
-.course-name {
-  font-size: 2.2rem;
-  font-weight: 600;
-  color: #3e3e3e;
-  margin-bottom: 0.8rem;
-  line-height: 1.3;
-}
-
-.course-company {
-  font-size: 1.9rem;
-  color: #666766;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.course-date {
-  font-size: 1.7rem;
-  color: #999;
-  font-style: italic;
-}
-
-@media (max-width: 768px) {
-  .courses-grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
+/* ─── Responsive 576px ──────────────────────────────────────── */
+@media (max-width: 576px) {
+  .container-fluid {
+    padding: 0 3% !important;
   }
-  
-  .course-item {
-    padding: 1.2rem;
+
+  .firstName {
+    font-size: 2.8rem;
+    letter-spacing: 0.7rem;
   }
-  
-  .course-name {
+
+  .lastName {
+    font-size: 3.5rem;
+    letter-spacing: 0.8rem;
+  }
+
+  .jobTitle span {
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .title {
+    font-size: 2.4rem;
+    letter-spacing: 0.3rem;
+    line-height: 3rem;
+  }
+
+  p {
+    font-size: 1.9rem;
+  }
+
+  li {
     font-size: 2rem;
   }
-  
-  .course-company {
+
+  .record p {
+    font-size: 1.9rem;
+  }
+
+  .icon {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+  }
+
+  .photo-wrapper {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .photo {
+    width: 12rem;
+    height: 12rem;
+    max-height: 120px;
+  }
+
+  .link-card-label {
     font-size: 1.8rem;
   }
-  
-  .course-date {
-    font-size: 1.6rem;
+
+  .link-card-url {
+    font-size: 1.4rem;
+  }
+
+  .link-card-icon {
+    width: 3.6rem;
+    height: 3.6rem;
+    min-width: 3.6rem;
+    font-size: 1.8rem;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 576px) {
-  .courses-grid {
-    gap: 1rem;
+/* ─── IMPRESIÓN ─────────────────────────────────────────────── */
+@media print {
+  /*
+   * margin: 0mm elimina el área donde el navegador
+   * imprime la URL, fecha y número de página.
+   * Los márgenes del contenido se manejan con padding.
+   */
+  @page {
+    size: A4;
+    margin: 0mm;
   }
-  
+
+  html {
+    font-size: 26%;
+  }
+
+  /* Márgenes reales del contenido */
+  .container-fluid {
+    padding: 12mm 15mm !important;
+  }
+
+  /* Header */
+  .header {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+    border-top: 4px solid var(--accent);
+    margin-bottom: 2rem;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .headLine, .middleLine {
+    display: block;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Columnas */
+  .personal-details {
+    border-right: 1px solid var(--border) !important;
+    padding-right: 2.5rem !important;
+    border-bottom: none !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .main-content {
+    padding-left: 2.5rem !important;
+  }
+
+  /* Títulos */
+  .title {
+    font-size: 2.8rem;
+    letter-spacing: 0.5rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.2rem;
+    break-after: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Evitar cortes en bloques importantes */
+  .record {
+    break-inside: avoid;
+  }
+
   .course-item {
-    padding: 1rem;
+    break-inside: avoid;
   }
-  
+
+  .job-header {
+    break-after: avoid;
+  }
+
+  /* Achievements: indentación con sangría francesa */
+  .achievement-line {
+    padding-left: 2rem;
+    text-indent: -1.5rem;
+    line-height: 1.6;
+    margin-bottom: 0.4rem !important;
+  }
+
+  /* Skills: pills compactos */
+  .skills-grid {
+    gap: 0.5rem;
+  }
+
+  .skill-item {
+    padding: 0.3rem 1rem;
+    border-radius: 12px;
+    background: #f0fdfa !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .skill-item p {
+    font-size: 1.6rem;
+    color: var(--accent) !important;
+    white-space: normal;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Cursos: 2 columnas */
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .course-item {
+    padding: 0.8rem 1rem;
+    box-shadow: none;
+    border-top: 2px solid var(--accent);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .course-item:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
   .course-name {
     font-size: 1.8rem;
   }
-  
+
   .course-company {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
-  
+
   .course-date {
+    font-size: 1.3rem;
+  }
+
+  /* Links */
+  .link-card {
+    padding: 0.7rem 1rem;
+    background: #f0fdfa !important;
+    border-color: var(--accent) !important;
+    break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .link-card:hover {
+    transform: none;
+  }
+
+  .link-card-icon {
+    background: var(--accent) !important;
+    width: 3.2rem;
+    height: 3.2rem;
+    min-width: 3.2rem;
+    font-size: 1.6rem;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .link-card-label {
+    font-size: 1.7rem;
+  }
+
+  .link-card-url {
     font-size: 1.4rem;
   }
-}
 
-@media print {
-  @page {
-    size: A4;
-    margin: 0mm !important;
-  }
-  html {
-    font-size: 24%;
+  /* Bullets */
+  .bullet i {
+    color: var(--accent) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
-  .header {
-    padding-top: 12rem;
-    padding-bottom: 9rem;
+  .bullet:before {
+    background-color: var(--border) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Ícono de contacto */
+  .icon {
+    background-color: var(--accent) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* job-header */
+  .job-header {
+    border-left-color: var(--accent) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+  .stat-value {
+    font-size: 3.5rem;
+    color: var(--accent) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .stat-label {
+    font-size: 1.4rem;
+  }
+
+  /* Notable Clients */
+  .notable-clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
+  }
+  .notable-client-card {
+    padding: 0.8rem 1rem;
+    background: #f0fdfa !important;
+    border-color: rgba(15,118,110,0.3) !important;
+    break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .notable-client-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .client-icon {
+    font-size: 2.2rem;
+    color: var(--accent) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .client-name {
+    font-size: 1.8rem;
+  }
+  .client-desc {
+    font-size: 1.4rem;
+  }
+
+  /* Certifications */
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
+  }
+  .cert-card {
+    padding: 0.8rem 1rem;
+    border-left-color: var(--accent) !important;
+    break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .cert-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .cert-icon {
+    font-size: 2.2rem;
+    color: var(--accent) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .cert-name {
+    font-size: 1.7rem;
+  }
+  .cert-issuer {
+    font-size: 1.4rem;
+    color: var(--accent) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .cert-date {
+    font-size: 1.2rem;
+  }
+
+  /* Ocultar botón imprimir */
+  .btn-group-fab {
+    display: none !important;
   }
 
   ul li {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
   }
-  
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
+
+  p {
+    font-size: 2.2rem;
+    line-height: 1.5;
   }
-  
-  .skill-item {
-    padding: 0.5rem;
-    box-shadow: none;
-    border: 1px solid #ddd;
+
+  .record p {
+    font-size: 2.1rem;
   }
-  
-  .skill-item p {
-    font-size: 1.8rem;
+
+  li {
+    font-size: 2.3rem;
+    line-height: 1.5;
   }
-  
-  .courses-grid {
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-  }
-  
-  .course-item {
-    padding: 0.8rem;
-    box-shadow: none;
-    border: 1px solid #ddd;
-  }
-  
-  .course-item:before {
-    display: none;
-  }
-  
-  .course-name {
-    font-size: 1.6rem;
-  }
-  
-  .course-company {
-    font-size: 1.4rem;
-  }
-  
-  .course-date {
-    font-size: 1.2rem;
+
+  span {
+    letter-spacing: 0.1rem;
   }
 }
