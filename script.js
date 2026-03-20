@@ -28,21 +28,45 @@ const resume = {
     {
       label: "GitHub",
       link: "https://github.com/alexlondon07",
+      icon: "github",
     },
     {
       label: "LinkedIn",
       link: "https://www.linkedin.com/in/alexanderlondono1/",
+      icon: "linkedin",
     },
     {
       label: "Twitter",
       link: "https://twitter.com/alexlondon07",
+      icon: "twitter",
     },
   ],
   skills: [
+    "Clean Code",
     "Java",
+    "IA",
     "Spring Boot",
     "Spring",
-    "GIT",
+    "Config Server",
+    "AWS",
+    "PHP",
+    "Log4j",
+    "Maven",
+    "JUnit",
+    "Mockito",
+    "CD (continuous deployment)",
+    "DevOps",
+    "Docker",
+    "Spring Cloud",
+    "Relational Database",
+    "API gateway pattern",
+    "Jenkins",
+    "Splunk",
+    "New Relic",
+    "AWS",
+    "Grafana",
+    "AppDynamics",
+    "Git",
     "GitHub",
     "DevOps with GitHub",
     "Microservices",
@@ -58,12 +82,23 @@ const resume = {
     "PHP",
     "Angular",
     "TypeScript",
-    "Azure",
     "MySQL",
     "PostgreSQL",
     "MongoDB",
-    "Python Learning",
-    "Flutter Learning",
+    "GIT",
+    "GitHub",
+    "DevOps with GitHub",
+    "Microservices",
+
+    "Docker",
+    "Splunk",
+    "Grafana",
+    "New Relic",
+    "Angular",
+    "TypeScript",
+    "MySQL",
+    "PostgreSQL",
+    "MongoDB",
   ],
   languages: ["English - Intermediate ", "Spanish - Native"],
   professionalSummary: `Passionate about technology, code, and coffee.☕
@@ -75,7 +110,7 @@ I am highly responsible, detail-oriented, and always eager to learn and expand m
 My current focus is Spring Boot and Microservices, where I leverage my skills to build efficient, scalable, and secure solutions. Additionally, I'm continuously learning and exploring new technologies such as Microservices, Python, and AWS..`,
   employmentHistory: [
     {
-      jobTitle: "Java Developer, Ssr Adv",
+      jobTitle: "Java Developer",
       startDate: "August  2021",
       endDate: "Current",
       employer: "Globant",
@@ -87,6 +122,8 @@ My current focus is Spring Boot and Microservices, where I leverage my skills to
         "Build and maintain new services with Java and Spring Boot, using best practices for Software architecture ",
         "Project Disney Parks: Support the food and beverage area of mobile ordering at Disney Parks",
         "Project Disney Cruise Line and Project BetterMe4Glb by Globant: Working Spring Boot",
+        "Project BetterMe4Glb by Globant: Working with Java, Spring Boot, Spring Cloud, AWS, Docker, Splunk, Grafana, New Relic",
+        "Project British Airways: Working with Java, Spring Boot, Microservices, AWS, Clean Code, DevOps with GitHub, Scrums, Datadog, Argo CD, Sqs, S3, RDS, DynamoDB, Sns, CloudWatch, GitHub Actions",
         "Environment, Tools, and Methodologies : Java 8,11, REST API, Microservices with (Spring Boot), Hystrix, Spring Config server, Log4j, Maven, Git, JUnit, Mockito, CD (continuous deployment), DevOps with Docker, Spring Cloud, Relational Database, API gateway pattern, Jenkins, Splunk, New Relic, AWS, Grafana, AppDynamics, Git, GitHub, Maven, Gradle, Jira, Scrum, MySQL, JPA, AWS, Confluence ",
       ],
     },
@@ -299,7 +336,12 @@ const formatResume = (r) => ({
 
 new Vue({
     el: "#app",
-    data: formatResume(resume)
+    data: formatResume(resume),
+    methods: {
+        cleanUrl(url) {
+            return url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+        }
+    }
 });
 
 /**

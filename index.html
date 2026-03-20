@@ -14,16 +14,19 @@
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <title>Resume/CV Alexander</title>
         <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+            crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-        <!-- Add Web Animations Polyfill :) -->
+        <!-- Add Web Animations Polyfill :) -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.2/web-animations.min.js"></script>
-        <script type="module" src="https://cdn.jsdelivr.net/npm/@proyecto26/animatable-component@1.1.10/dist/animatable-component/animatable-component.esm.js">
-        </script>
+        <script type="module"
+            src="https://cdn.jsdelivr.net/npm/@proyecto26/animatable-component@1.1.10/dist/animatable-component/animatable-component.esm.js">
+            </script>
     </head>
 
     <body class="d-none">
@@ -32,13 +35,13 @@
                 <animatable-component autoplay animation="fadeInDownBig" easing="ease-in-out" duration="1200">
                     <div class="headLine position-absolute"></div>
                 </animatable-component>
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col">
                         <animatable-component autoplay animation="fadeInLeft" easing="ease-in-out" duration="1200">
                             <h1 class="firstName text-break">{{ firstName }}</h1>
                         </animatable-component>
                         <animatable-component autoplay animation="fadeInDown" easing="ease-in-out" duration="1200">
-                            <h2 class="lastName text-nowrap">{{ lastName }}</h2>
+                            <h2 class="lastName text-break">{{ lastName }}</h2>
                         </animatable-component>
                         <animatable-component autoplay animation="fade-in-left" easing="ease-in-out" duration="1200">
                             <p class="jobTitle">
@@ -49,7 +52,13 @@
                     </div>
                     <div v-if="!!photo" class="col-auto d-none d-lg-block d-print-block">
                         <animatable-component autoplay animation="rotateIn" easing="ease-in" duration="1200">
-                            <img v-bind:src.prop="photo" class="photo border border-2 border-dark rounded-circle img-fluid float-end img-thumbnail" />
+                            <div class="photo-wrapper">
+                                <img v-bind:src.prop="photo"
+                                    class="photo border border-2 border-dark rounded-circle img-fluid float-end img-thumbnail"
+                                    decoding="async"
+                                    onerror="this.parentElement.style.display='none'"
+                                    onload="this.classList.add('photo-loaded')" />
+                            </div>
                         </animatable-component>
                     </div>
                 </div>
@@ -59,8 +68,10 @@
             </header>
             <section class="content">
                 <div class="row">
-                    <div class="col personal-details me-4">
-                        <div class="row list-item me-5">
+
+                    <!-- Columna izquierda: datos personales, educación, links, skills, idiomas -->
+                    <div class="col-12 col-lg-4 personal-details">
+                        <div class="row list-item">
                             <div class="col-auto">
                                 <animatable-component autoplay animation="heartBeat" easing="ease-in" duration="1200">
                                     <div class="icon d-flex justify-content-center">
@@ -72,7 +83,7 @@
                                 <p>{{ address }}</p>
                             </div>
                         </div>
-                        <div v-if="!!phone" class="row list-item me-5">
+                        <div v-if="!!phone" class="row list-item">
                             <div class="col-auto align-self-center">
                                 <animatable-component autoplay animation="swing" easing="ease-in" duration="1200">
                                     <div class="icon d-flex justify-content-center">
@@ -86,7 +97,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row list-item me-5">
+                        <div class="row list-item">
                             <div class="col-auto align-self-center">
                                 <animatable-component autoplay animation="flip" easing="ease-in" duration="1200">
                                     <div class="icon d-flex justify-content-center">
@@ -100,7 +111,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row mt-5 me-5">
+                        <div class="row mt-5">
                             <div class="col">
                                 <p class="title">Education</p>
                             </div>
@@ -117,37 +128,37 @@
                                 <p>{{ e.description }}</p>
                             </div>
                         </div>
-                        <div class="row mt-5 me-5">
+                        <div class="row mt-5">
                             <div class="col p-0">
                                 <p class="title">Links</p>
                             </div>
                         </div>
-                        <div class="row record me-5" v-for="l in links">
-                            <div class="col-auto bullet mb-5">
-                                <i class="bi bi-record-circle"></i>
-                            </div>
-                            <div class="col">
-                                <p>
-                                    {{ l.label }}:
-                                    <a class="text-reset" target="_blank" v-bind:href.prop="l.link">
-                                        {{ l.link }}
-                                    </a>
-                                </p>
-                            </div>
+                        <div class="links-list">
+                            <a class="link-card" target="_blank" v-bind:href.prop="l.link" v-for="l in links">
+                                <div class="link-card-icon">
+                                    <i v-bind:class="'bi bi-' + l.icon"></i>
+                                </div>
+                                <div class="link-card-text">
+                                    <span class="link-card-label">{{ l.label }}</span>
+                                    <span class="link-card-url">{{ cleanUrl(l.link) }}</span>
+                                </div>
+                            </a>
                         </div>
-                        <div class="row mt-5 me-5">
+                        <div class="row mt-5">
                             <div class="col p-0">
                                 <p class="title">Skills</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <ul class="ms-2">
-                                    <li class="pb-2" v-for="skill in skills">{{ skill }}</li>
-                                </ul>
+                                <div class="skills-grid">
+                                    <div class="skill-item" v-for="skill in skills">
+                                        <p>{{ skill }}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="row mt-5 me-5">
+                        <div class="row mt-5">
                             <div class="col p-0">
                                 <p class="title">Languages</p>
                             </div>
@@ -162,7 +173,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col col-8">
+
+                    <!-- Columna derecha: about me, experiencia, cursos -->
+                    <div class="col-12 col-lg-8 main-content">
                         <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
                             <div class="row bullet">
                                 <div class="col-auto pt-2">
@@ -213,36 +226,40 @@
                                 <br>
                             </div>
                         </div>
-                        <div class="row mt-5 me-5">
+                        <div class="row mt-5">
                             <div class="col p-0">
-                                <p class="title">Couses</p>
+                                <p class="title">Courses</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <ul class="ms-2">
-                                    <li class="pb-2" v-for="course in courses ">{{ course.name }}
-                                        <p class="white-space: pre-line fw-bold"> {{ course.company }}</p>
-                                    </li>
-                                </ul>
+                                <div class="courses-grid">
+                                    <div class="course-item" v-for="course in courses">
+                                        <div class="course-name">{{ course.name }}</div>
+                                        <div class="course-company">{{ course.company }}</div>
+                                        <div class="course-date" v-if="course.date">{{ course.date }}</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </section>
         </section>
         <div class="btn-group-fab d-print-none">
             <div>
-                <button onclick="javascript:window.print()" type="button" class="btn btn-main btn-primary" title="Print">
+                <button onclick="javascript:window.print()" type="button" class="btn btn-main btn-primary"
+                    title="Print">
                     <i class="bi bi-printer fs-3"></i>
                 </button>
             </div>
         </div>
 
         <!-- Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+            </script>
     </body>
 
     </html>
