@@ -379,13 +379,30 @@ const resumeData = {
   },
 };
 
+const storage = {
+  get(key, fallback) {
+    try {
+      return localStorage.getItem(key) || fallback;
+    } catch {
+      return fallback;
+    }
+  },
+  set(key, value) {
+    try {
+      localStorage.setItem(key, value);
+    } catch {
+      // Private browsing and restrictive browser policies may block storage.
+    }
+  },
+};
+
 const state = {
-  lang: localStorage.getItem("resume:lang") || "es",
-  theme: localStorage.getItem("resume:theme") || getSystemTheme(),
+  lang: ["es", "en"].includes(storage.get("resume:lang", "es")) ? storage.get("resume:lang", "es") : "es",
+  theme: storage.get("resume:theme", getSystemTheme()),
 };
 
 function getSystemTheme() {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return typeof window.matchMedia === "function" && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 
 function getPath(source, path) {
@@ -399,7 +416,7 @@ function refreshIcons() {
 function setTheme(theme) {
   state.theme = theme;
   document.documentElement.dataset.theme = theme;
-  localStorage.setItem("resume:theme", theme);
+  storage.set("resume:theme", theme);
 
   const icon = document.querySelector("[data-theme-icon]");
   const button = document.querySelector("[data-theme-toggle]");
@@ -410,7 +427,7 @@ function setTheme(theme) {
 
 function setLanguage(lang) {
   state.lang = lang;
-  localStorage.setItem("resume:lang", lang);
+  storage.set("resume:lang", lang);
   document.documentElement.lang = lang;
 
   document.querySelectorAll("[data-lang-option]").forEach((button) => {
