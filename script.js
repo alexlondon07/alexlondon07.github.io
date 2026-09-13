@@ -1,371 +1,582 @@
-/**
- * Resume/CV template created with Bootstrap 5 by @vmoratog and @jdnichollsc
- */
-const resume = {
-  firstName: "Alexander Andrés",
-  lastName: "Londoño Espejo",
-  jobTitle: "Senior Java Developer & Software Engineer",
-  city: "Medellín",
-  postalCode: "",
-  country: "Colombia",
-  phone: "",
-  email: "alexlondon07@gmail.com",
-  education: [
-    {
-      school: "METROPOLITAN TECHNOLOGICAL INSTITUTE ITM",
-      degree: "Bachelor",
-      graduationDate: "2014",
-      description: "Systems Engineer",
+const resumeData = {
+  es: {
+    actions: { pdf: "Imprimir CV" },
+    hero: { eyebrow: "Senior software engineer | 2026" },
+    profile: {
+      name: "Alexander Andres Londono Espejo",
+      role: "Senior Java Developer | Software Engineer",
+      status: "Globant | British Airways | Disney Parks & Resorts",
     },
-    {
-      school: "METROPOLITAN TECHNOLOGICAL INSTITUTE ITM",
-      degree: "Bachelor",
-      graduationDate: "2012",
-      description: "Information Systems Technologist",
+    summary: {
+      body: "Ingeniero de software senior con mas de 12 anos construyendo plataformas backend, microservicios y soluciones cloud para productos internacionales. Especializado en Java, Spring Boot, WebFlux, AWS y arquitecturas orientadas a eventos, con experiencia reciente en automatizacion, desarrollo guiado por especificaciones y herramientas de IA como Kiro, GitHub Copilot y Claude.",
     },
-  ],
-  links: [
-    {
-      label: "GitHub",
-      link: "https://github.com/alexlondon07",
-      icon: "github",
+    sections: {
+      skills: "Habilidades tecnicas",
+      education: "Educacion y certificaciones",
+      languages: "Idiomas",
+      experience: "Experiencia laboral",
+      projects: "Proyectos destacados",
     },
-    {
-      label: "LinkedIn",
-      link: "https://www.linkedin.com/in/alexanderlondono1/",
-      icon: "linkedin",
+    labels: {
+      location: "Ubicacion",
+      email: "Email",
+      linkedin: "LinkedIn",
+      phone: "Telefono",
+      github: "GitHub",
+      web: "Web",
+      stack: "Stack",
+      architecture: "Arquitectura",
+      view: "Ver enlace",
     },
-    {
-      label: "Twitter",
-      link: "https://twitter.com/alexlondon07",
-      icon: "twitter",
+    stats: [
+      ["12+", "anos de experiencia"],
+      ["8+", "companias y clientes"],
+      ["3+", "proyectos internacionales"],
+    ],
+    contacts: [
+      ["phone", "+57 312 219 5522", "tel:+573122195522"],
+      ["location", "Medellin, Colombia", ""],
+      ["email", "alexlondon07@gmail.com", "mailto:alexlondon07@gmail.com"],
+      ["linkedin", "linkedin.com/in/alexanderlondono1", "https://www.linkedin.com/in/alexanderlondono1/"],
+      ["github", "github.com/alexlondon07", "https://github.com/alexlondon07"],
+      ["web", "alexlondon07.com", "https://alexlondon07.com"],
+    ],
+    skills: [
+      ["Backend", ["Java 8/11/17", "Spring Boot", "Spring WebFlux", "Spring Cloud", "REST APIs", "Microservicios", "Clean Architecture", "JPA"]],
+      ["Frontend", ["React", "Next.js", "Angular", "TypeScript", "JavaScript", "HTML5", "CSS3"]],
+      ["AWS & Cloud", ["AWS", "Lambda", "ECS", "EKS", "API Gateway", "EventBridge", "SQS", "SNS", "S3", "RDS", "DynamoDB", "CloudWatch", "IAM"]],
+      ["Delivery & Automation", ["Docker", "Kubernetes", "GitHub Actions", "Jenkins", "Argo CD", "CI/CD", "Serverless", "Automation", "Scrum"]],
+      ["Ingenieria asistida por IA", ["Kiro", "GitHub Copilot", "Amazon Q", "Claude Code", "Claude", "Hooks", "Spec-driven development", "Code review", "Test automation"]],
+      ["DB & Observability", ["PostgreSQL", "MySQL", "MongoDB", "Datadog", "Splunk", "Grafana", "New Relic"]],
+    ],
+    education: [
+      ["Ingeniero de Sistemas", "Instituto Tecnologico Metropolitano ITM, 2012 - 2014 | Semillero de computacion en la nube"],
+      ["Tecnologo en Sistemas de Informacion", "Instituto Tecnologico Metropolitano ITM, 2008 - 2013"],
+      ["Diplomado desarrollo movil multiplataforma", "React Native"],
+      ["Principios SOLID y Clean Code", "Formacion profesional"],
+      ["MongoDB CRUD Operations", "Replace and Delete Documents"],
+      ["Business English", "Easy English for Meetings"],
+    ],
+    languages: [
+      ["Espanol", "Nativo"],
+      ["Ingles", "Competencia profesional"],
+    ],
+    experience: [
+      {
+        title: "Java Developer Ssr Adv",
+        company: "Globant / British Airways",
+        period: "Ago 2021 - Actual",
+        achievements: [
+          "Diseno y evolucion de microservicios reactivos de alto rendimiento con Java, Spring Boot, WebFlux y Clean Architecture.",
+          "Diseno de sistemas event-driven con AWS SQS y SNS, integrando servicios desacoplados y comunicacion asincrona.",
+          "Implementacion de pipelines CI/CD automatizados con GitHub Actions y Argo CD para despliegues en Kubernetes.",
+          "Construccion de dashboards en Splunk y Grafana, monitoreo con Datadog y AWS CloudWatch, y respuesta a incidentes con analisis de causa raiz.",
+          "Aplicacion de spec-driven development y herramientas de IA como Kiro, GitHub Copilot y Claude para acelerar analisis, implementacion y revisiones.",
+          "Entrega de funcionalidades para British Airways, Disney Parks & Resorts, Disney Cruise Line y BetterMe4Glb.",
+        ],
+        stack: "Java 8/11, Spring Boot, WebFlux, AWS, Lambda, SQS, SNS, Docker, JUnit, Mockito, Maven, Gradle",
+      },
+      {
+        title: "Consultant",
+        company: "Axity",
+        period: "Mar 2021 - Jul 2021",
+        achievements: [
+          "Diseno y construccion de soluciones end-to-end para una plataforma de Identity Governance and Administration (IGA).",
+          "Desarrollo de microservicios backend con Java y Spring Boot y componentes frontend con Angular.",
+          "Implementacion de pruebas unitarias y pipelines CI/CD en Azure DevOps para elevar la calidad y confiabilidad de las entregas.",
+        ],
+        stack: "Java, Spring Boot, Angular, JUnit, Mockito, Jest, AWS, Azure DevOps, SQL",
+      },
+      {
+        title: "Application Development Analyst",
+        company: "Accenture",
+        period: "Oct 2019 - Feb 2021",
+        achievements: [
+          "Diseno, desarrollo y configuracion de aplicaciones empresariales con Angular 7/8/9 y Spring Boot.",
+          "Transformacion de requerimientos de negocio en soluciones mantenibles, probables y listas para evolucionar.",
+          "Colaboracion con equipos distribuidos mediante Azure DevOps, AWS y practicas de entrega iterativa.",
+        ],
+        stack: "Spring Boot, Angular 7/8/9, Azure DevOps, AWS",
+      },
+      {
+        title: "Backlog Developer Analyst",
+        company: "Konecta Colombia",
+        period: "Mar 2019 - Oct 2019",
+        achievements: [
+          "Implementacion de soluciones empresariales con Java, Spring, PHP Laravel y Angular.",
+          "Integracion de sistemas mediante servicios web RESTful y APIs REST.",
+          "Analisis, diseno y documentacion de requerimientos e integraciones orientadas al cliente.",
+        ],
+        stack: "Java, Spring, Laravel, Angular, REST APIs",
+      },
+      {
+        title: "Junior Analyst Developer",
+        company: "Grupo Reditos",
+        period: "Abr 2017 - Mar 2019",
+        achievements: [
+          "Desarrollo y soporte de soluciones empresariales con Java, JavaScript y Oracle Database.",
+          "Construccion de aplicaciones moviles con Android Studio y atencion integral de requerimientos de software.",
+        ],
+        stack: "Java, JavaScript, Oracle, Android Studio",
+      },
+      {
+        title: "Freelancer",
+        company: "Independent projects",
+        period: "Feb 2017 - Feb 2019",
+        achievements: [
+          "Entrega de soluciones de software a la medida para necesidades web y procesos de negocio.",
+          "Desarrollo full-stack con Java, PHP, JavaScript, Laravel, Node.js, Angular y Spring Boot.",
+        ],
+        stack: "Java, PHP, JavaScript, Laravel, Node.js, Angular, Spring Boot",
+      },
+      {
+        title: "Software Web Developer",
+        company: "granada.io",
+        period: "Dic 2016 - Feb 2017",
+        achievements: [
+          "Desarrollo de aplicaciones web con JavaScript, Angular 2 y TypeScript, enfocadas en una experiencia de usuario consistente.",
+        ],
+        stack: "JavaScript, Angular 2, TypeScript",
+      },
+      {
+        title: "Back-end Developer",
+        company: "Secuencia 24 S.A.S.",
+        period: "Sep 2013 - Dic 2016",
+        achievements: [
+          "Desarrollo de CMS y soluciones web para clientes, participando en analisis, desarrollo, pruebas, implementacion y capacitacion.",
+          "Diseno y desarrollo de componentes backend con PHP y frameworks web, cuidando mantenibilidad y calidad del producto.",
+          "Analisis y especificacion de necesidades tecnicas, coordinacion de entregas y mejora continua de proyectos.",
+        ],
+        stack: "PHP, HTML5, CSS3, jQuery, Ajax, Laravel, Yii, Bootstrap, AngularJS",
+      },
+    ],
+    projects: [
+      {
+        title: "British Airways Cloud Services",
+        description: "Microservicios Java en AWS para flujos operativos, mensajeria y observabilidad de plataforma.",
+        architecture: "Spring Boot, AWS, SQS, SNS, DynamoDB, RDS, Argo CD",
+        link: "https://www.britishairways.com",
+      },
+      {
+        title: "Disney Parks Mobile Ordering",
+        description: "Servicios backend para experiencias de food & beverage y ordenes moviles en alto volumen.",
+        architecture: "Java, Spring Boot, REST APIs, CI/CD, observability",
+        link: "https://disneyworld.disney.go.com/guest-services/mobile-food-orders/",
+      },
+      {
+        title: "Legacy POS & Business Systems",
+        description: "Modernizacion de aplicaciones PHP/MySQL, automatizaciones, reportes financieros y herramientas operativas.",
+        architecture: "PHP, MySQL, JavaScript, integrations, reporting",
+        link: "https://github.com/alexlondon07",
+      },
+    ],
+  },
+  en: {
+    actions: { pdf: "Print resume" },
+    hero: { eyebrow: "Senior software engineer | 2026" },
+    profile: {
+      name: "Alexander Andres Londono Espejo",
+      role: "Senior Java Developer | Software Engineer",
+      status: "Globant | British Airways | Disney Parks & Resorts",
     },
-  ],
-  skills: [
-    "Clean Code",
-    "Clean Architecture",
-    "Java",
-    "Spring Boot",
-    "Spring",
-    "Spring Cloud",
-    "Config Server",
-    "Microservices",
-    "API REST",
-    "API Gateway Pattern",
-    "Docker",
-    "DevOps",
-    "DevOps with GitHub",
-    "CI/CD",
-    "Jenkins",
-    "AWS",
-    "Git",
-    "GitHub",
-    "JavaScript",
-    "Angular",
-    "TypeScript",
-    "PHP",
-    "MySQL",
-    "PostgreSQL",
-    "MongoDB",
-    "Relational Database",
-    "JUnit",
-    "Mockito",
-    "Log4j",
-    "Maven",
-    "Splunk",
-    "Grafana",
-    "New Relic",
-    "AppDynamics",
-    "AI",
-  ],
-  languages: ["English - B2 Intermediate", "Spanish - Native"],
-  stats: [
-    { value: "11+", label: "Years of Experience" },
-    { value: "8+",  label: "Companies" },
-    { value: "3",   label: "International Projects" },
-    { value: "4",   label: "LinkedIn Recommendations" },
-  ],
-  certifications: [
-    {
-      name: "SI Architect Certification Program",
-      issuer: "MongoDB",
-      date: "Aug 2024",
-      icon: "bi-patch-check-fill",
+    summary: {
+      body: "Senior software engineer with 12+ years building backend platforms, microservices, and cloud solutions for international products. Specialized in Java, Spring Boot, WebFlux, AWS, and event-driven architectures, with recent focus on automation, spec-driven development, and AI tools including Kiro, GitHub Copilot, and Claude.",
     },
-    {
-      name: "Associate Certification Program",
-      issuer: "MongoDB",
-      date: "May 2023",
-      icon: "bi-patch-check-fill",
+    sections: {
+      skills: "Technical skills",
+      education: "Education & certifications",
+      languages: "Languages",
+      experience: "Work experience",
+      projects: "Featured projects",
     },
-    {
-      name: "AWS Technical Essentials",
-      issuer: "Amazon Web Services",
-      date: "Jan 2024",
-      icon: "bi-cloud-fill",
+    labels: {
+      location: "Location",
+      email: "Email",
+      linkedin: "LinkedIn",
+      phone: "Phone",
+      github: "GitHub",
+      web: "Web",
+      stack: "Stack",
+      architecture: "Architecture",
+      view: "View link",
     },
-    {
-      name: "B2 Intermediate English",
-      issuer: "English Services",
-      date: "Sep 2024",
-      icon: "bi-translate",
-    },
-  ],
-  notableClients: [
-    { name: "Disney Parks",     icon: "bi-star-fill",       description: "Mobile ordering platform — food & beverage" },
-    { name: "British Airways",  icon: "bi-airplane-fill",   description: "Microservices & cloud migration — AWS" },
-    { name: "Disney Cruise Line", icon: "bi-water",         description: "Spring Boot backend services" },
-    { name: "Globant BetterMe", icon: "bi-heart-pulse-fill", description: "Java, Spring Cloud, AWS, New Relic" },
-  ],
-  professionalSummary: `Passionate about technology, code, and coffee.☕
-
-As a seasoned Software Engineer and Informatics Technologist with over 11 years of experience, I have a proven track record of delivering innovative solutions to complex problems. I have developed strong teamwork and customer experience skills throughout my career, and I'm comfortable taking a proactive and dynamic approach.
-
-I am highly responsible, detail-oriented, and always eager to learn and expand my knowledge base. I have excellent project planning, management, and implementation skills, and I'm proficient in various programming languages and tools, including Java, Spring, Spring Boot, PHP, JavaScript, Angular, DevOps, and Docker.
-
-My current focus is Spring Boot and Microservices, where I leverage my skills to build efficient, scalable, and secure solutions. Additionally, I'm continuously learning and exploring new technologies such as AI, Python, and AWS.`,
-  employmentHistory: [
-    {
-      jobTitle: "Java Developer",
-      startDate: "August 2021",
-      endDate: "Current",
-      employer: "Globant",
-      city: "Remote, Medellín/Colombia",
-      achievements: [
-        "Help maintain the quality, organization, and automation of the entire application stack, building Microservices with Spring Boot.",
-        "Write clean, readable code and fix bugs.",
-        "Use and contribute to the Continuous Integration and Continuous Delivery process (CI/CD).",
-        "Build and maintain new services with Java and Spring Boot, using best practices for software architecture.",
-        "Project Disney Parks: Support the food and beverage area of mobile ordering at Disney Parks.",
-        "Project Disney Cruise Line and Project BetterMe4Glb by Globant: Working with Spring Boot.",
-        "Project BetterMe4Glb by Globant: Working with Java, Spring Boot, Spring Cloud, AWS, Docker, Splunk, Grafana, New Relic.",
-        "Project British Airways: Working with Java, Spring Boot, Microservices, AWS, Clean Code, DevOps with GitHub, Scrum, Datadog, Argo CD, SQS, S3, RDS, DynamoDB, SNS, CloudWatch, GitHub Actions.",
-        "Environment, Tools, and Methodologies: Java 8/11, REST API, Microservices with Spring Boot, Hystrix, Spring Config Server, Log4j, Maven, Git, JUnit, Mockito, CI/CD, DevOps with Docker, Spring Cloud, Relational Database, API Gateway Pattern, Jenkins, Splunk, New Relic, AWS, Grafana, AppDynamics, GitHub, Gradle, Jira, Scrum, MySQL, JPA, Confluence.",
-      ],
-    },
-    {
-      jobTitle: "Consultant",
-      startDate: "March 2021",
-      endDate: "August 2021",
-      employer: "Axity",
-      city: "Remote, Medellín/Colombia",
-      achievements: [
-        "Project IGA (Identity Governance and Administration): Design, build and configure applications to meet business process and applications requirements",
-        "Technologies: Java, Spring Boot, Spring, Junit, Mockito, Angular, JEST, AWS, Azure DevOps, SQL",
-      ],
-    },
-    {
-      jobTitle: "Application Development Analyst",
-      startDate: "October 2019",
-      endDate: "February 2021",
-      employer: "Accenture",
-      city: "Medellín/Colombia",
-      achievements: [
-        "Design, build and configure applications to meet business process and application requirements, using frameworks like Angular 7, 8, 9 and Spring Boot, and technologies like Azure DevOps and AWS.",
-      ],
-    },
-    {
-      jobTitle: "Backlog Developer Analyst",
-      startDate: "March 2021",
-      endDate: "October 2021",
-      employer: "Konecta Colombia",
-      city: "Medellín/Colombia",
-      achievements: [
-        "Develop software solutions using Java with Spring framework, PHP with Laravel 5.8, and Angular 8+.",
-        "Integrate information systems using RESTful web services and REST APIs.",
-        "Design, develop and document the requirements requested by the customer in the aforementioned technologies.",
-      ],
-    },
-    {
-      jobTitle: "Junior Analyst Developer",
-      startDate: "March 2017",
-      endDate: "March 2019",
-      employer: "Réditos Group",
-      city: "Medellín/Colombia",
-      achievements: [
-        "Develop and support software implementations based on client requirements to ensure effective solutions, using Java and JavaScript as programming languages along with Oracle Database Manager, and technologies such as Android Studio for mobile application development.",
-      ],
-    },
-    {
-      jobTitle: "Freelancer",
-      startDate: "February 2017",
-      endDate: "February 2019",
-      employer: "Freelancer",
-      city: "Medellín/Colombia",
-      achievements: [
-        "Custom software development with technologies and programming languages such as Java, PHP, JavaScript, Laravel, nodeJS, Angular, Spring Boot",
-      ],
-    },
-    {
-      jobTitle: "Software Web Developer",
-      startDate: "December 2016",
-      endDate: "February 2017",
-      employer: "Granada.io",
-      city: "Medellín/Colombia",
-      achievements: [
-        "Develop software using JavaScript as the programming language and the Angular 2 framework with TypeScript.",
-      ],
-    },
-    {
-      jobTitle: "Back-End Developer",
-      startDate: "",
-      endDate: "",
-      employer: "Secuencia 24 S.A.S",
-      city: "Medellín/Colombia",
-      achievements: [
-        "Develop CMS (Content Management System) for the company's clients' websites.",
-        "Develop computer software assuming the role of designer and developer, in collaboration with other members of the working group, using technologies such as PHP, HTML5, CSS3, jQuery, Ajax, Laravel, Yii, Bootstrap, AngularJS.",
-        "Develop the function of analyst and specifier of computer needs and solutions, as well as being ultimately responsible for the development, testing, implementation and user training of the generated systems.",
-        "Evaluate, design, develop and coordinate information technology projects and intervene in the continuous improvement of product quality.",
-      ],
-    },
-  ],
-  courses: [
-    {
-      name: "SI Architect Certification Program",
-      company: "Mongo DB",
-      date: "2024-08-27",
-    },
-    {
-      name: "B1_Intermediate",
-      company: "English Services",
-      date: "2024-09-02",
-    },
-    {
-      name: "Apache Kafka con Java, Spring framework y AWS",
-      company: "Udemy",
-      date: "2024-04-02",
-    },
-    {
-      name: "AWS Technical Essentials",
-      company: "Amazon Web Services (AWS)",
-      date: "2024-01-01",
-    },
-    {
-      name: "MicSI Associate Certification Program",
-      company: "Mongo DB",
-      date: "2023-05-26",
-    },
-    {
-      name: "MicroServices con Spring cloud . In process",
-      company: "",
-      date: "",
-    },
-    {
-      name: "Build Reactive MicroServices using Spring WebFlux/SpringBoot",
-      company: "Udemy",
-      date: "February 2023",
-    },
-    {
-      name: "Programación Reactiva con Spring Boot 2 y Spring WebFlux",
-      company: "Udemy",
-      date: "October 2022",
-    },
-    {
-      name: "Microservicios Spring Cloud Eureka & Angular Full-stack",
-      company: "Udemy",
-      date: "August 2022",
-    },
-    {
-      name: "Patrones de diseño de software y principios SOLID.",
-      company: "Udemy",
-      date: "August 2022",
-    },
-    {
-      name: "Principios SOLID y Clean Code",
-      company: "Udemy",
-      date: "August 2022",
-    },
-    {
-      name: "Spring Boot For Software Engineers",
-      company: "Udemy",
-      date: "August 2022",
-    },
-    {
-      name: "Docker for Java Developers",
-      company: "Udemy",
-      date: "August 2022",
-    },
-    {
-      name: "Microservices Designing Highly Scalable Systems",
-      company: "Udemy",
-      date: "April 2022",
-    },
-    {
-      name: "Docker for Java Developers",
-      company: "Udemy",
-      date: "April 2022",
-    },
-    {
-      name: "Microservicios con Spring Boot y Spring Cloud Netflix Eureka",
-      company: "Udemy",
-      date: "March 2022",
-    },
-    {
-      name: "Java Streams API Developer Guide",
-      company: "Udemy",
-      date: "February 2022",
-    },
-    {
-      name: "Business English: Easy English for Meetings",
-      company: "Udemy",
-      date: "February 2022",
-    },
-    {
-      name: "Rest Systems in Java",
-      company: "Acamica",
-      date: "Aug 2021",
-    },
-    {
-      name: "Quality code and refactoring",
-      company: "Acamica",
-      date: "Aug 2021",
-    },
-    {
-      name: "Secure Development Workshop",
-      company: "Netec",
-      date: "July 2021",
-    },
-    {
-      name: "Diploma in Multiplatform Mobile Development with React Native",
-      company: "Cedesistemas",
-      date: "Aug 2018",
-    },
-    {
-      name: "Development for Android mobile devices advanced level",
-      company: "Cedesistemas",
-      date: "Sep 2017",
-    },
-  ],
-  photo:
-    "https://media.licdn.com/dms/image/v2/D4E03AQG4E3M4m20wgw/profile-displayphoto-scale_400_400/B4EZj9utGBGoAk-/0/1756603539108?e=1759363200&v=beta&t=NuPHMaTi9WJl8FxGEuTZWczhUnsB1q_QO11peVCjcgU",
+    stats: [
+      ["12+", "years of experience"],
+      ["8+", "companies and clients"],
+      ["3+", "international projects"],
+    ],
+    contacts: [
+      ["phone", "+57 312 219 5522", "tel:+573122195522"],
+      ["location", "Medellin, Colombia", ""],
+      ["email", "alexlondon07@gmail.com", "mailto:alexlondon07@gmail.com"],
+      ["linkedin", "linkedin.com/in/alexanderlondono1", "https://www.linkedin.com/in/alexanderlondono1/"],
+      ["github", "github.com/alexlondon07", "https://github.com/alexlondon07"],
+      ["web", "alexlondon07.com", "https://alexlondon07.com"],
+    ],
+    skills: [
+      ["Backend", ["Java 8/11/17", "Spring Boot", "Spring WebFlux", "Spring Cloud", "REST APIs", "Microservices", "Clean Architecture", "JPA"]],
+      ["Frontend", ["React", "Next.js", "Angular", "TypeScript", "JavaScript", "HTML5", "CSS3"]],
+      ["AWS & Cloud", ["AWS", "Lambda", "ECS", "EKS", "API Gateway", "EventBridge", "SQS", "SNS", "S3", "RDS", "DynamoDB", "CloudWatch", "IAM"]],
+      ["Delivery & Automation", ["Docker", "Kubernetes", "GitHub Actions", "Jenkins", "Argo CD", "CI/CD", "Serverless", "Automation", "Scrum"]],
+      ["AI-assisted engineering", ["Kiro", "GitHub Copilot", "Amazon Q", "Claude Code", "Claude", "Hooks", "Spec-driven development", "Code review", "Test automation"]],
+      ["DB & Observability", ["PostgreSQL", "MySQL", "MongoDB", "Datadog", "Splunk", "Grafana", "New Relic"]],
+    ],
+    education: [
+      ["Systems Engineer", "Metropolitan Technological Institute ITM, 2012 - 2014 | Cloud computing group"],
+      ["Information Systems Technologist", "Metropolitan Technological Institute ITM, 2008 - 2013"],
+      ["Diploma in cross-platform mobile development", "React Native"],
+      ["SOLID Principles and Clean Code", "Professional training"],
+      ["MongoDB CRUD Operations", "Replace and Delete Documents"],
+      ["Business English", "Easy English for Meetings"],
+    ],
+    languages: [
+      ["Spanish", "Native"],
+      ["English", "Professional working proficiency"],
+    ],
+    experience: [
+      {
+        title: "Java Developer Ssr Adv",
+        company: "Globant / British Airways",
+        period: "Aug 2021 - Present",
+        achievements: [
+          "Design and evolve high-performance reactive microservices with Java, Spring Boot, WebFlux, and Clean Architecture.",
+          "Design event-driven systems with AWS SQS and SNS, integrating decoupled services and asynchronous communication.",
+          "Implement automated CI/CD pipelines with GitHub Actions and Argo CD for Kubernetes deployments.",
+          "Build Splunk and Grafana dashboards, monitor with Datadog and AWS CloudWatch, and lead incident response and root cause analysis.",
+          "Apply spec-driven development and AI tools including Kiro, GitHub Copilot, and Claude across analysis, implementation, and review.",
+          "Deliver features for British Airways, Disney Parks & Resorts, Disney Cruise Line, and BetterMe4Glb.",
+        ],
+        stack: "Java 8/11, Spring Boot, WebFlux, AWS, Lambda, SQS, SNS, Docker, JUnit, Mockito, Maven, Gradle",
+      },
+      {
+        title: "Consultant",
+        company: "Axity",
+        period: "Mar 2021 - Jul 2021",
+        achievements: [
+          "Designed and built end-to-end solutions for an Identity Governance and Administration (IGA) platform.",
+          "Developed Java and Spring Boot backend microservices and Angular frontend components.",
+          "Implemented unit testing and Azure DevOps CI/CD pipelines to improve delivery quality and reliability.",
+        ],
+        stack: "Java, Spring Boot, Angular, JUnit, Mockito, Jest, AWS, Azure DevOps, SQL",
+      },
+      {
+        title: "Application Development Analyst",
+        company: "Accenture",
+        period: "Oct 2019 - Feb 2021",
+        achievements: [
+          "Designed, developed, and configured enterprise applications with Angular 7/8/9 and Spring Boot.",
+          "Translated business requirements into maintainable solutions ready to evolve with changing needs.",
+          "Collaborated with distributed teams using Azure DevOps, AWS, and iterative delivery practices.",
+        ],
+        stack: "Spring Boot, Angular 7/8/9, Azure DevOps, AWS",
+      },
+      {
+        title: "Backlog Developer Analyst",
+        company: "Konecta Colombia",
+        period: "Mar 2019 - Oct 2019",
+        achievements: [
+          "Implemented enterprise solutions with Java, Spring, PHP Laravel, and Angular.",
+          "Integrated systems through RESTful web services and REST APIs.",
+          "Analyzed, designed, and documented client requirements and integration services.",
+        ],
+        stack: "Java, Spring, Laravel, Angular, REST APIs",
+      },
+      {
+        title: "Junior Analyst Developer",
+        company: "Grupo Reditos",
+        period: "Apr 2017 - Mar 2019",
+        achievements: [
+          "Developed and supported enterprise solutions with Java, JavaScript, and Oracle Database.",
+          "Built Android mobile applications and managed software requirements through delivery and support.",
+        ],
+        stack: "Java, JavaScript, Oracle, Android Studio",
+      },
+      {
+        title: "Freelancer",
+        company: "Independent projects",
+        period: "Feb 2017 - Feb 2019",
+        achievements: [
+          "Delivered custom software solutions for web products and business processes.",
+          "Developed full-stack solutions with Java, PHP, JavaScript, Laravel, Node.js, Angular, and Spring Boot.",
+        ],
+        stack: "Java, PHP, JavaScript, Laravel, Node.js, Angular, Spring Boot",
+      },
+      {
+        title: "Software Web Developer",
+        company: "granada.io",
+        period: "Dec 2016 - Feb 2017",
+        achievements: [
+          "Developed web applications with JavaScript, Angular 2, and TypeScript, with focus on a consistent user experience.",
+        ],
+        stack: "JavaScript, Angular 2, TypeScript",
+      },
+      {
+        title: "Back-end Developer",
+        company: "Secuencia 24 S.A.S.",
+        period: "Sep 2013 - Dec 2016",
+        achievements: [
+          "Developed CMS and web solutions for clients across analysis, development, testing, implementation, and training.",
+          "Designed and developed backend components with PHP and web frameworks, focusing on maintainability and quality.",
+          "Analyzed and specified technical needs, coordinated deliveries, and contributed to continuous project improvement.",
+        ],
+        stack: "PHP, HTML5, CSS3, jQuery, Ajax, Laravel, Yii, Bootstrap, AngularJS",
+      },
+    ],
+    projects: [
+      {
+        title: "British Airways Cloud Services",
+        description: "Java microservices on AWS for operational flows, messaging, and platform observability.",
+        architecture: "Spring Boot, AWS, SQS, SNS, DynamoDB, RDS, Argo CD",
+        link: "https://www.britishairways.com",
+      },
+      {
+        title: "Disney Parks Mobile Ordering",
+        description: "Backend services for high-volume food and beverage mobile ordering experiences.",
+        architecture: "Java, Spring Boot, REST APIs, CI/CD, observability",
+        link: "https://disneyworld.disney.go.com/guest-services/mobile-food-orders/",
+      },
+      {
+        title: "Legacy POS & Business Systems",
+        description: "Modernization of PHP/MySQL apps, automations, financial reporting, and operational tools.",
+        architecture: "PHP, MySQL, JavaScript, integrations, reporting",
+        link: "https://github.com/alexlondon07",
+      },
+    ],
+  },
 };
 
-const formatResume = (r) => ({
-    ...r,
-    address: [
-        r.country,
-        r.city,
-        r.postalCode
-    ].filter(Boolean).join(', ')
-})
+const state = {
+  lang: localStorage.getItem("resume:lang") || "es",
+  theme: localStorage.getItem("resume:theme") || getSystemTheme(),
+};
 
-new Vue({
-    el: "#app",
-    data: formatResume(resume),
-    methods: {
-        cleanUrl(url) {
-            return url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
-        }
-    }
+function getSystemTheme() {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function getPath(source, path) {
+  return path.split(".").reduce((value, key) => value?.[key], source) ?? "";
+}
+
+function refreshIcons() {
+  if (window.lucide) window.lucide.createIcons();
+}
+
+function setTheme(theme) {
+  state.theme = theme;
+  document.documentElement.dataset.theme = theme;
+  localStorage.setItem("resume:theme", theme);
+
+  const icon = document.querySelector("[data-theme-icon]");
+  const button = document.querySelector("[data-theme-toggle]");
+  if (icon) icon.innerHTML = `<i data-lucide="${theme === "dark" ? "sun" : "moon"}"></i>`;
+  if (button) button.setAttribute("aria-label", theme === "dark" ? "Activar modo claro" : "Activar modo oscuro");
+  refreshIcons();
+}
+
+function setLanguage(lang) {
+  state.lang = lang;
+  localStorage.setItem("resume:lang", lang);
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll("[data-lang-option]").forEach((button) => {
+    const active = button.dataset.langOption === lang;
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+
+  render();
+}
+
+function renderStaticText(data) {
+  document.querySelectorAll("[data-i18n]").forEach((node) => {
+    node.textContent = getPath(data, node.dataset.i18n);
+  });
+  document.title = `${data.profile.name} | ${data.profile.role}`;
+}
+
+function renderStats(data) {
+  const target = document.querySelector('[data-render="stats"]');
+  target.innerHTML = data.stats
+    .map(([value, label]) => `<div><dt>${value}</dt><dd>${label}</dd></div>`)
+    .join("");
+}
+
+function renderContacts(data) {
+  const target = document.querySelector('[data-render="contacts"]');
+  const icons = { phone: "phone", location: "map-pin", email: "mail", linkedin: "linkedin", github: "github", web: "globe-2" };
+  target.innerHTML = data.contacts
+    .map(([key, value, href]) => {
+      const valueNode = href
+        ? `<a class="contact-value" href="${href}" target="${href.startsWith("http") ? "_blank" : "_self"}" rel="noreferrer">${value}</a>`
+        : `<span class="contact-value">${value}</span>`;
+      return `<article class="contact-item"><span class="contact-label"><i data-lucide="${icons[key]}" aria-hidden="true"></i>${data.labels[key]}</span>${valueNode}</article>`;
+    })
+    .join("");
+  refreshIcons();
+}
+
+function renderSkills(data) {
+  const target = document.querySelector('[data-render="skills"]');
+  const skillLogos = {
+    Java: "java",
+    "Spring Boot": "spring",
+    "Spring WebFlux": "spring",
+    "Spring Cloud": "spring",
+    React: "react",
+    "Next.js": "nextdotjs",
+    Angular: "angular",
+    TypeScript: "typescript",
+    JavaScript: "javascript",
+    HTML5: "html5",
+    CSS3: "css3",
+    AWS: "amazonaws",
+    Lambda: "awslambda",
+    ECS: "amazonecs",
+    EKS: "amazoneks",
+    "API Gateway": "amazonapigateway",
+    EventBridge: "amazoneventbridge",
+    SQS: "amazonsqs",
+    SNS: "amazonsns",
+    S3: "amazons3",
+    RDS: "amazonrds",
+    DynamoDB: "amazondynamodb",
+    CloudWatch: "amazoncloudwatch",
+    IAM: "awsiam",
+    Docker: "docker",
+    Kubernetes: "kubernetes",
+    "GitHub Actions": "githubactions",
+    Jenkins: "jenkins",
+    "Argo CD": "argo",
+    PostgreSQL: "postgresql",
+    MySQL: "mysql",
+    MongoDB: "mongodb",
+    Datadog: "datadog",
+    Splunk: "splunk",
+    Grafana: "grafana",
+    "New Relic": "newrelic",
+    "GitHub Copilot": "githubcopilot",
+    Kiro: "kiro",
+    "Amazon Q": "amazonq",
+    "Claude Code": "anthropic",
+    Claude: "anthropic",
+  };
+  const skillLucideIcons = {
+    Kiro: "bot",
+    Hooks: "git-branch",
+    "Spec-driven development": "file-code-2",
+    "Code review": "git-pull-request",
+    "Test automation": "test-tube",
+  };
+  target.innerHTML = data.skills
+    .map(([group, skills]) => `
+      <article class="skill-group">
+        <h3>${group}</h3>
+        <div class="pill-list">${skills.map((skill) => {
+          const logo = skillLogos[skill];
+          const fallbackIcon = skillLucideIcons[skill];
+          const logoNode = logo
+            ? `<img src="https://cdn.simpleicons.org/${logo}" alt="" aria-hidden="true" onload="this.parentElement.querySelector('.skill-fallback')?.setAttribute('hidden', '')" onerror="this.hidden=true">`
+            : "";
+          const fallbackNode = fallbackIcon ? `<i class="skill-fallback" data-lucide="${fallbackIcon}" aria-hidden="true"></i>` : "";
+          return `<span class="pill">${logoNode}${fallbackNode}<span>${skill}</span></span>`;
+        }).join("")}</div>
+      </article>
+    `)
+    .join("");
+}
+
+function renderEducation(data) {
+  const target = document.querySelector('[data-render="education"]');
+  target.innerHTML = data.education
+    .map(([title, detail]) => `<article class="compact-card"><h3>${title}</h3><p>${detail}</p></article>`)
+    .join("");
+}
+
+function renderLanguages(data) {
+  const target = document.querySelector('[data-render="languages"]');
+  target.innerHTML = data.languages
+    .map(([name, level]) => `<article class="language-card"><strong>${name}</strong><p>${level}</p></article>`)
+    .join("");
+}
+
+function getCompanyBrand(company) {
+  const brands = [
+    { match: "Globant", urls: ["https://statics.globant.com/production/public/2022-08/globant-logo.jpg"], initials: "GL" },
+    { match: "Grupo Reditos", urls: ["https://www.gruporeditos.com/wp-content/uploads/2026/06/cropped-Logo-Grupo-Reditos-2023.png"], initials: "GR" },
+    { match: "Axity", urls: ["https://axity.com/wp-content/uploads/2024/11/axity-logo.png"], initials: "AX" },
+    { match: "Accenture", logos: ["accenture"], initials: "AC" },
+    { match: "Konecta", logos: ["konecta"], initials: "KO" },
+    { match: "Freelancer", logos: ["freelancer"], initials: "FR" },
+  ];
+  return brands.find((brand) => company.includes(brand.match)) || { logos: [], initials: company.slice(0, 2).toUpperCase() };
+}
+
+function renderCompanyBrand(company) {
+  const brand = getCompanyBrand(company);
+  const sources = brand.urls || (brand.logos || []).map((logo) => `https://cdn.simpleicons.org/${logo}`);
+  const wideLogo = sources.some((source) => source.includes("gruporeditos") || source.includes("globant-logo") || source.includes("axity-logo"));
+  const logos = sources
+    .map((source) => `<img src="${source}" alt="" loading="lazy" onload="this.parentElement.querySelector('.logo-fallback').hidden=true" onerror="this.hidden=true">`)
+    .join("");
+  return `<span class="company-logo${wideLogo ? " company-logo-wide" : ""}" aria-hidden="true">${logos}<span class="logo-fallback">${brand.initials}</span></span>`;
+}
+
+function renderExperience(data) {
+  const target = document.querySelector('[data-render="experience"]');
+  target.innerHTML = data.experience
+    .map((job) => `
+      <article class="timeline-item">
+        <div class="timeline-top">
+          <div>
+            <h3>${job.title}</h3>
+            <p class="company"><span class="company-identity">${renderCompanyBrand(job.company)}<span>${job.company}</span></span></p>
+          </div>
+          <p class="meta">${job.period}</p>
+        </div>
+        <ul class="achievement-list">${job.achievements.map((item) => `<li>${item}</li>`).join("")}</ul>
+        <p class="stack-line">${data.labels.stack}: ${job.stack}</p>
+      </article>
+    `)
+    .join("");
+}
+
+function renderProjects(data) {
+  const target = document.querySelector('[data-render="projects"]');
+  target.innerHTML = data.projects
+    .map((project) => `
+      <article class="project-card">
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+        <p class="stack-line">${data.labels.architecture}: ${project.architecture}</p>
+        <a href="${project.link}" target="_blank" rel="noreferrer">${data.labels.view}</a>
+      </article>
+    `)
+    .join("");
+}
+
+function render() {
+  const data = resumeData[state.lang];
+  renderStaticText(data);
+  renderStats(data);
+  renderContacts(data);
+  renderSkills(data);
+  renderEducation(data);
+  renderLanguages(data);
+  renderExperience(data);
+  renderProjects(data);
+  refreshIcons();
+}
+
+document.querySelectorAll("[data-lang-option]").forEach((button) => {
+  button.addEventListener("click", () => setLanguage(button.dataset.langOption));
 });
 
-/**
- * Wait for animatable-component to be loaded (Only for VanillaJS)
- **/
-function animatableLoaded() {
-    document.querySelector('body').classList.remove('d-none');
-}
-if (customElements) {
-    customElements.whenDefined('animatable-component').then(animatableLoaded);
-} else animatableLoaded()
+document.querySelector("[data-theme-toggle]").addEventListener("click", () => {
+  setTheme(state.theme === "dark" ? "light" : "dark");
+});
+
+document.querySelector("[data-print]").addEventListener("click", () => window.print());
+
+setTheme(state.theme);
+setLanguage(state.lang);

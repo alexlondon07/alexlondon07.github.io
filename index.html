@@ -1,307 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <title>CV Alexander Londoño</title>
-    <link rel="stylesheet" href="./style.css" />
-</head>
-
-<body>
-    <!-- partial:index.partial.html -->
-    <html lang="en">
-
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Resume/CV Alexander</title>
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-            crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-        <!-- Add Web Animations Polyfill :) -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.2/web-animations.min.js"></script>
-        <script type="module"
-            src="https://cdn.jsdelivr.net/npm/@proyecto26/animatable-component@1.1.10/dist/animatable-component/animatable-component.esm.js">
-            </script>
-    </head>
-
-    <body class="d-none">
-        <section id="app" class="container-fluid">
-            <header class="header position-relative">
-                <animatable-component autoplay animation="fadeInDownBig" easing="ease-in-out" duration="1200">
-                    <div class="headLine position-absolute"></div>
-                </animatable-component>
-                <div class="row align-items-center">
-                    <div class="col">
-                        <animatable-component autoplay animation="fadeInLeft" easing="ease-in-out" duration="1200">
-                            <h1 class="firstName text-break">{{ firstName }}</h1>
-                        </animatable-component>
-                        <animatable-component autoplay animation="fadeInDown" easing="ease-in-out" duration="1200">
-                            <h2 class="lastName text-break">{{ lastName }}</h2>
-                        </animatable-component>
-                        <animatable-component autoplay animation="fade-in-left" easing="ease-in-out" duration="1200">
-                            <p class="jobTitle">
-                                <i class="bi bi-circle-fill"></i>
-                                <span class="text-break"> {{ jobTitle }} </span>
-                            </p>
-                        </animatable-component>
-                    </div>
-                    <div v-if="!!photo" class="col-auto d-none d-lg-block d-print-block">
-                        <animatable-component autoplay animation="rotateIn" easing="ease-in" duration="1200">
-                            <div class="photo-wrapper">
-                                <img v-bind:src.prop="photo"
-                                    class="photo border border-2 border-dark rounded-circle img-fluid float-end img-thumbnail"
-                                    decoding="async"
-                                    onerror="this.parentElement.style.display='none'"
-                                    onload="this.classList.add('photo-loaded')" />
-                            </div>
-                        </animatable-component>
-                    </div>
-                </div>
-                <animatable-component autoplay animation="fadeInUpBig" easing="ease-in-out" duration="1200">
-                    <div class="middleLine position-absolute"></div>
-                </animatable-component>
-                <!-- Stats bar -->
-                <div class="stats-bar">
-                    <div class="stat-item" v-for="stat in stats">
-                        <span class="stat-value">{{ stat.value }}</span>
-                        <span class="stat-label">{{ stat.label }}</span>
-                    </div>
-                </div>
-            </header>
-            <section class="content">
-                <div class="row">
-
-                    <!-- Columna izquierda: datos personales, educación, links, skills, idiomas -->
-                    <div class="col-12 col-lg-4 personal-details">
-                        <div class="row list-item">
-                            <div class="col-auto">
-                                <animatable-component autoplay animation="heartBeat" easing="ease-in" duration="1200">
-                                    <div class="icon d-flex justify-content-center">
-                                        <i class="bi bi-geo-alt-fill" role="img" aria-label="Location"></i>
-                                    </div>
-                                </animatable-component>
-                            </div>
-                            <div class="col" style="white-space: pre-line">
-                                <p>{{ address }}</p>
-                            </div>
-                        </div>
-                        <div v-if="!!phone" class="row list-item">
-                            <div class="col-auto align-self-center">
-                                <animatable-component autoplay animation="swing" easing="ease-in" duration="1200">
-                                    <div class="icon d-flex justify-content-center">
-                                        <i class="bi bi-telephone-fill" role="img" aria-label="Telephone"></i>
-                                    </div>
-                                </animatable-component>
-                            </div>
-                            <div class="col">
-                                <a v-bind:href="'tel:'+ phone" class="text-decoration-none">
-                                    <p>{{ phone }}</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row list-item">
-                            <div class="col-auto align-self-center">
-                                <animatable-component autoplay animation="flip" easing="ease-in" duration="1200">
-                                    <div class="icon d-flex justify-content-center">
-                                        <i class="bi bi-envelope-fill" role="img" aria-label="Email"></i>
-                                    </div>
-                                </animatable-component>
-                            </div>
-                            <div class="col">
-                                <a v-bind:href="'mailto:'+ email" class="text-decoration-none">
-                                    <p>{{ email }}</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row mt-5">
-                            <div class="col">
-                                <p class="title">Education</p>
-                            </div>
-                        </div>
-                        <div class="row record" v-for="e in education">
-                            <div class="col-auto bullet">
-                                <i class="bi bi-record-circle"></i>
-                            </div>
-                            <div class="col">
-                                <p class="fw-bold text-uppercase">{{ e.degree }}</p>
-                                <p class="fw-bold text-uppercase">
-                                    {{ e.school }}, {{ e.graduationDate }}
-                                </p>
-                                <p>{{ e.description }}</p>
-                            </div>
-                        </div>
-                        <div class="row mt-5">
-                            <div class="col p-0">
-                                <p class="title">Links</p>
-                            </div>
-                        </div>
-                        <div class="links-list">
-                            <a class="link-card" target="_blank" v-bind:href.prop="l.link" v-for="l in links">
-                                <div class="link-card-icon">
-                                    <i v-bind:class="'bi bi-' + l.icon"></i>
-                                </div>
-                                <div class="link-card-text">
-                                    <span class="link-card-label">{{ l.label }}</span>
-                                    <span class="link-card-url">{{ cleanUrl(l.link) }}</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="row mt-5">
-                            <div class="col p-0">
-                                <p class="title">Skills</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="skills-grid">
-                                    <div class="skill-item" v-for="skill in skills">
-                                        <p>{{ skill }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-5">
-                            <div class="col p-0">
-                                <p class="title">Languages</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <ul class="ms-2">
-                                    <li class="pb-2 fw-bold" v-for="language in languages">
-                                        {{ language }}
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Columna derecha: about me, experiencia, cursos -->
-                    <div class="col-12 col-lg-8 main-content">
-
-                        <!-- Notable Clients -->
-                        <div class="row mb-2">
-                            <div class="col">
-                                <p class="title">Notable Clients</p>
-                                <div class="notable-clients-grid">
-                                    <div class="notable-client-card" v-for="client in notableClients">
-                                        <i v-bind:class="'bi ' + client.icon + ' client-icon'"></i>
-                                        <div class="client-info">
-                                            <span class="client-name">{{ client.name }}</span>
-                                            <span class="client-desc">{{ client.description }}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
-                            <div class="row bullet">
-                                <div class="col-auto pt-2">
-                                    <i class="bi bi-circle-fill"></i>
-                                </div>
-                                <div class="col">
-                                    <p class="title">About Me</p>
-                                </div>
-                            </div>
-                        </animatable-component>
-                        <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
-                            <div class="row record bullet">
-                                <div class="col-auto">
-                                    <i class="bi bi-record-circle"></i>
-                                </div>
-                                <div class="col">
-                                    <p style="white-space: pre-line">
-                                        {{ professionalSummary }}
-                                    </p>
-                                </div>
-                            </div>
-                        </animatable-component>
-                        <div class="row mt-5">
-                            <div class="col-auto bullet pt-2">
-                                <i class="bi bi-circle-fill"></i>
-                            </div>
-                            <div class="col">
-                                <p class="title">Work Experience</p>
-                            </div>
-                        </div>
-                        <div class="row record mb-4 bullet" v-for="employment in employmentHistory">
-                            <div class="col-auto">
-                                <i class="bi bi-record-circle"></i>
-                            </div>
-                            <div class="col">
-                                <div class="job-header">
-                                    <div class="job-title-text">{{ employment.jobTitle }}</div>
-                                    <div class="job-dates">{{ employment.startDate }} — {{ employment.endDate }}</div>
-                                    <div class="job-employer">{{ employment.employer }}, {{ employment.city }}</div>
-                                </div>
-                                <p class="mb-0 achievement-line" v-for="achievement in employment.achievements">
-                                    • {{ achievement }}
-                                </p>
-                                <br>
-                            </div>
-                        </div>
-                        <!-- Certifications -->
-                        <div class="row mt-5">
-                            <div class="col p-0">
-                                <p class="title">Certifications</p>
-                            </div>
-                        </div>
-                        <div class="certifications-grid">
-                            <div class="cert-card" v-for="cert in certifications">
-                                <i v-bind:class="'bi ' + cert.icon + ' cert-icon'"></i>
-                                <div class="cert-info">
-                                    <span class="cert-name">{{ cert.name }}</span>
-                                    <span class="cert-issuer">{{ cert.issuer }}</span>
-                                    <span class="cert-date">{{ cert.date }}</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row mt-5">
-                            <div class="col p-0">
-                                <p class="title">Courses</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="courses-grid">
-                                    <div class="course-item" v-for="course in courses">
-                                        <div class="course-name">{{ course.name }}</div>
-                                        <div class="course-company">{{ course.company }}</div>
-                                        <div class="course-date" v-if="course.date">{{ course.date }}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-        </section>
-        <div class="btn-group-fab d-print-none">
-            <div>
-                <button onclick="javascript:window.print()" type="button" class="btn btn-main btn-primary"
-                    title="Print">
-                    <i class="bi bi-printer fs-3"></i>
-                </button>
-            </div>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="Hoja de vida y portafolio profesional de Alexander Andres Londono Espejo, Senior Software Engineer especializado en Java, Spring Boot, microservicios y cloud.">
+    <title>Alexander Andres Londono Espejo | Senior Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <nav class="topbar no-print" aria-label="Resume controls">
+        <a class="brand-mark" href="#top" aria-label="Alexander resume home">AL</a>
+        <div class="control-group" role="group" aria-label="Page preferences">
+          <button class="control-button is-active" type="button" data-lang-option="es" aria-pressed="true">ES</button>
+          <button class="control-button" type="button" data-lang-option="en" aria-pressed="false">EN</button>
+          <button class="icon-button" type="button" data-theme-toggle aria-label="Cambiar tema">
+            <span aria-hidden="true" data-theme-icon><i data-lucide="moon"></i></span>
+          </button>
+          <button class="download-button" type="button" data-print>
+            <i data-lucide="printer" aria-hidden="true"></i>
+            <span data-i18n="actions.pdf">Descargar PDF</span>
+          </button>
         </div>
+      </nav>
 
-        <!-- Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-            </script>
-    </body>
+      <main id="top" class="resume" aria-live="polite">
+        <header class="hero">
+          <div class="hero-main">
+            <p class="eyebrow" data-i18n="hero.eyebrow">Hoja de vida profesional 2026</p>
+            <h1 data-i18n="profile.name">Alexander Andres Londono Espejo</h1>
+            <p class="role" data-i18n="profile.role">Senior Java & Software Engineer</p>
+            <p class="summary-lead" data-i18n="summary.body"></p>
+          </div>
+          <aside class="hero-panel" aria-label="Professional status">
+            <span class="status-badge" data-i18n="profile.status">Java Developer at British Airways</span>
+            <dl class="quick-stats" data-render="stats"></dl>
+          </aside>
+        </header>
 
-    </html>
-    <!-- partial -->
+        <section class="contact-strip" aria-label="Contact information" data-render="contacts"></section>
+
+        <div class="content-grid">
+          <aside class="side-column">
+            <section class="section-block">
+              <div class="section-heading">
+                <i class="section-icon" data-lucide="braces" aria-hidden="true"></i>
+                <p data-i18n="sections.skills">Habilidades tecnicas</p>
+              </div>
+              <div class="skills-stack" data-render="skills"></div>
+            </section>
+
+            <section class="section-block">
+              <div class="section-heading">
+                <i class="section-icon" data-lucide="graduation-cap" aria-hidden="true"></i>
+                <p data-i18n="sections.education">Educacion y certificaciones</p>
+              </div>
+              <div class="compact-list" data-render="education"></div>
+            </section>
+
+            <section class="section-block">
+              <div class="section-heading">
+                <i class="section-icon" data-lucide="languages" aria-hidden="true"></i>
+                <p data-i18n="sections.languages">Idiomas</p>
+              </div>
+              <div class="language-list" data-render="languages"></div>
+            </section>
+          </aside>
+
+          <div class="main-column">
+            <section class="section-block">
+              <div class="section-heading">
+                <span>01</span>
+                <i class="section-icon" data-lucide="briefcase-business" aria-hidden="true"></i>
+                <p data-i18n="sections.experience">Experiencia laboral</p>
+              </div>
+              <div class="timeline" data-render="experience"></div>
+            </section>
+
+            <section class="section-block">
+              <div class="section-heading">
+                <span>02</span>
+                <i class="section-icon" data-lucide="folder-kanban" aria-hidden="true"></i>
+                <p data-i18n="sections.projects">Proyectos destacados</p>
+              </div>
+              <div class="project-grid" data-render="projects"></div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://unpkg.com/lucide@0.468.0"></script>
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
